@@ -10,17 +10,35 @@ export default {
   },
 
   styleResources: {
-    sass: ['@/assets/styles/variables/*.sass']
+    sass: ['@/assets/styles/variables/*.sass'],
   },
 
   css: [
     '@/assets/styles/fonts.sass',
-    '@/assets/styles/reset.sass'
+    '@/assets/styles/reset.sass',
+    '@/assets/styles/transitions.sass',
   ],
 
-  plugins: [],
+  plugins: [
+    {
+      src: '@/plugins/ripple',
+      mode: 'client',
+    },
+  ],
 
-  components: true,
+  components: {
+    dirs: [
+      {
+        path: '@/components/ui/',
+        prefix: 'ui',
+      },
+      {
+        path: '@/components/icons/',
+        prefix: 'icon',
+        global: true,
+      },
+    ],
+  },
 
   buildModules: [
     '@nuxtjs/eslint-module',
