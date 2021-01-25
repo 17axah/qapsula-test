@@ -14,6 +14,7 @@ export default {
   },
 
   css: [
+    '@/assets/styles/fonts.sass',
     '@/assets/styles/reset.sass'
   ],
 
