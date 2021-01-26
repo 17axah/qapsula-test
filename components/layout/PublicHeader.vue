@@ -36,7 +36,9 @@ export default {
     position: fixed
     left: 0
     top: 0
+    background-color: $color-white
     border-bottom: 1px solid $color-blue-lighten-1
+    z-index: 100
 
   &__inner
     height: 100%
