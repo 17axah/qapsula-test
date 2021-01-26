@@ -1,0 +1,32 @@
+@mixin display($breakpoint: false)
+  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
+
+  @each $display_value in $display
+    .d#{$breakpoint}-#{$display_value}
+      display: $display_value
+
+@mixin alignment($breakpoint: false)
+  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
+
+  @each $alignment in $items-alignment
+    .items#{$breakpoint}-#{$alignment}
+      align-items: $alignment
+
+  @each $alignment in $content-alignment
+    .content#{$breakpoint}-#{$alignment}
+      justify-content: $alignment
+
+@include display()
+@include alignment()
+
+@media (min-width: $breakpoint-sm)
+  @include display('sm')
+  @include alignment('sm')
+
+@media (min-width: $breakpoint-md)
+  @include display('md')
+  @include alignment('md')
+
+@media (min-width: $breakpoint-lg)
+  @include display('lg')
+  @include alignment('lg')

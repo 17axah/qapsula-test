@@ -10,7 +10,7 @@ export default {
   },
 
   styleResources: {
-    sass: ['@/assets/styles/variables/*.sass'],
+    sass: ['@/assets/styles/_variables.sass'],
   },
 
   css: [
@@ -19,6 +19,7 @@ export default {
     '@/assets/styles/transitions.sass',
     '@/assets/styles/spacing.sass',
     '@/assets/styles/grid.sass',
+    '@/assets/styles/helpers.sass',
   ],
 
   plugins: [
