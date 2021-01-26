@@ -1,24 +1,3 @@
-@mixin spaces($type, $breakpoint: false)
-  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
-
-  @each $space in $spaces
-    .#{$type}a#{$breakpoint}-#{$space}
-      margin: #{$space}px
-    .#{$type}t#{$breakpoint}-#{$space}
-      margin-top: #{$space}px
-    .#{$type}b#{$breakpoint}-#{$space}
-      margin-bottom: #{$space}px
-    .#{$type}l#{$breakpoint}-#{$space}
-      margin-left: #{$space}px
-    .#{$type}r#{$breakpoint}-#{$space}
-      margin-right: #{$space}px
-    .#{$type}v#{$breakpoint}-#{$space}
-      margin-top: #{$space}px
-      margin-bottom: #{$space}px
-    .#{$type}h#{$breakpoint}-#{$space}
-      margin-left: #{$space}px
-      margin-right: #{$space}px
-
 @include spaces('p')
 @include spaces('m')
 

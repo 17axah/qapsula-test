@@ -10,7 +10,10 @@ export default {
   },
 
   styleResources: {
-    sass: ['@/assets/styles/_variables.sass'],
+    sass: [
+      '@/assets/styles/_variables.sass',
+      '@/assets/styles/_mixins.sass',
+    ],
   },
 
   css: [

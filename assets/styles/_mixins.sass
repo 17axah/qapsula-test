@@ -1,0 +1,46 @@
+@mixin columns($breakpoint: false)
+  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
+
+  @for $i from 1 through $columns
+    .col#{$breakpoint}-#{$i}
+      flex-basis: (100 / ($columns / $i) ) * 1%
+      max-width: (100 / ($columns / $i) ) * 1%
+
+@mixin display($breakpoint: false)
+  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
+
+  @each $display_value in $display
+    .d#{$breakpoint}-#{$display_value}
+      display: $display_value
+
+@mixin alignment($breakpoint: false)
+  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
+
+  @each $alignment in $items-alignment
+    .items#{$breakpoint}-#{$alignment}
+      align-items: $alignment
+
+  @each $alignment in $content-alignment
+    .content#{$breakpoint}-#{$alignment}
+      justify-content: $alignment
+
+@mixin spaces($type, $breakpoint: false)
+  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
+
+  @each $space in $spaces
+    .#{$type}a#{$breakpoint}-#{$space}
+      margin: #{$space}px
+    .#{$type}t#{$breakpoint}-#{$space}
+      margin-top: #{$space}px
+    .#{$type}b#{$breakpoint}-#{$space}
+      margin-bottom: #{$space}px
+    .#{$type}l#{$breakpoint}-#{$space}
+      margin-left: #{$space}px
+    .#{$type}r#{$breakpoint}-#{$space}
+      margin-right: #{$space}px
+    .#{$type}v#{$breakpoint}-#{$space}
+      margin-top: #{$space}px
+      margin-bottom: #{$space}px
+    .#{$type}h#{$breakpoint}-#{$space}
+      margin-left: #{$space}px
+      margin-right: #{$space}px

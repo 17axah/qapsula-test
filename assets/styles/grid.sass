@@ -1,11 +1,3 @@
-@mixin columns($breakpoint: false)
-  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
-
-  @for $i from 1 through $columns
-    .col#{$breakpoint}-#{$i}
-      flex-basis: (100 / ($columns / $i) ) * 1%
-      max-width: (100 / ($columns / $i) ) * 1%
-
 .row
   display: flex
   box-sizing: border-box

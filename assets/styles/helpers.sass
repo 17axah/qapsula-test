@@ -1,21 +1,3 @@
-@mixin display($breakpoint: false)
-  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
-
-  @each $display_value in $display
-    .d#{$breakpoint}-#{$display_value}
-      display: $display_value
-
-@mixin alignment($breakpoint: false)
-  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
-
-  @each $alignment in $items-alignment
-    .items#{$breakpoint}-#{$alignment}
-      align-items: $alignment
-
-  @each $alignment in $content-alignment
-    .content#{$breakpoint}-#{$alignment}
-      justify-content: $alignment
-
 @include display()
 @include alignment()
 
