@@ -7,14 +7,7 @@
 @include display()
 @include alignment()
 
-@media (min-width: $breakpoint-sm)
-  @include display('sm')
-  @include alignment('sm')
-
-@media (min-width: $breakpoint-md)
-  @include display('md')
-  @include alignment('md')
-
-@media (min-width: $breakpoint-lg)
-  @include display('lg')
-  @include alignment('lg')
+@each $bp, $size in $breakpoints
+  @media (min-width: $size)
+    @include display($bp)
+    @include alignment($bp)

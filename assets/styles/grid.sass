@@ -19,11 +19,6 @@
 
 @include columns()
 
-@media (min-width: $breakpoint-sm)
-  @include columns('sm')
-
-@media (min-width: $breakpoint-md)
-  @include columns('md')
-
-@media (min-width: $breakpoint-lg)
-  @include columns('lg')
+@each $bp, $size in $breakpoints
+  @media (min-width: $size)
+    @include columns($bp)
