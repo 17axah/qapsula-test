@@ -43,6 +43,14 @@ export default {
         prefix: 'icon',
         global: true,
       },
+      {
+        path: '@/components/helpers/',
+        prefix: 'helper',
+      },
+      {
+        path: '@/components/app/',
+        prefix: 'app',
+      },
     ],
   },
 

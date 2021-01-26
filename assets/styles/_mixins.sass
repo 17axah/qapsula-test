@@ -24,6 +24,10 @@
     .content#{$breakpoint}-#{$alignment}
       justify-content: $alignment
 
+  @each $alignment in $text-alignment
+    .text#{$breakpoint}-#{$alignment}
+      text-align: $alignment
+
 @mixin spaces($type, $breakpoint: false)
   $breakpoint: if($breakpoint,'-#{$breakpoint}','')
 
