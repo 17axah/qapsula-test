@@ -18,6 +18,7 @@ export default {
     '@/assets/styles/reset.sass',
     '@/assets/styles/transitions.sass',
     '@/assets/styles/spaces.sass',
+    '@/assets/styles/grid.sass',
   ],
 
   plugins: [
