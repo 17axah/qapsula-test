@@ -63,7 +63,17 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
+    'nuxt-mq',
   ],
+
+  mq: {
+    defaultBreakpoint: 'sm',
+    breakpoints: {
+      sm: 768,
+      md: 1024,
+      lg: 1200,
+    },
+  },
 
   axios: {},
 
