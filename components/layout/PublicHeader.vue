@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import PublicMenu from '@/components/layout/PublicMenu'
+import PublicMenu from '@/components/layout/PublicMenu.vue'
 
 export default {
   components: {
