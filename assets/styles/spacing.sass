@@ -1,21 +1,21 @@
-@mixin spaces($type, $size: false)
-  $prefix: if($size,'-#{$size}','')
+@mixin spaces($type, $breakpoint: false)
+  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
 
   @each $space in $spaces
-    .#{$type}#{$prefix}-a-#{$space}
+    .#{$type}a#{$breakpoint}-#{$space}
       margin: #{$space}px
-    .#{$type}#{$prefix}-t-#{$space}
+    .#{$type}t#{$breakpoint}-#{$space}
       margin-top: #{$space}px
-    .#{$type}#{$prefix}-b-#{$space}
+    .#{$type}b#{$breakpoint}-#{$space}
       margin-bottom: #{$space}px
-    .#{$type}#{$prefix}-l-#{$space}
+    .#{$type}l#{$breakpoint}-#{$space}
       margin-left: #{$space}px
-    .#{$type}#{$prefix}-r-#{$space}
+    .#{$type}r#{$breakpoint}-#{$space}
       margin-right: #{$space}px
-    .#{$type}#{$prefix}-v-#{$space}
+    .#{$type}v#{$breakpoint}-#{$space}
       margin-top: #{$space}px
       margin-bottom: #{$space}px
-    .#{$type}#{$prefix}-h-#{$space}
+    .#{$type}h#{$breakpoint}-#{$space}
       margin-left: #{$space}px
       margin-right: #{$space}px
 

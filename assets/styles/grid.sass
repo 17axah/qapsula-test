@@ -1,8 +1,8 @@
-@mixin columns($size: false)
-  $prefix: if($size,'-#{$size}','')
+@mixin columns($breakpoint: false)
+  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
 
   @for $i from 1 through $columns
-    .col#{$prefix}-#{$i}
+    .col#{$breakpoint}-#{$i}
       flex-basis: (100 / ($columns / $i) ) * 1%
       max-width: (100 / ($columns / $i) ) * 1%
 
@@ -17,11 +17,11 @@
   box-sizing: border-box
 
 @each $gutter in $gutters
-  .row-gutter-#{$gutter}
+  .gutter-#{$gutter}
     margin-left: -#{$gutter}px
     margin-right: -#{$gutter}px
 
-  .row-gutter-#{$gutter} > [class*=col-]
+  .gutter-#{$gutter} > [class*=col-]
       padding-left: #{$gutter}px
       padding-right: #{$gutter}px
 

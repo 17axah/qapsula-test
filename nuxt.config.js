@@ -17,7 +17,7 @@ export default {
     '@/assets/styles/fonts.sass',
     '@/assets/styles/reset.sass',
     '@/assets/styles/transitions.sass',
-    '@/assets/styles/spaces.sass',
+    '@/assets/styles/spacing.sass',
     '@/assets/styles/grid.sass',
   ],
 
