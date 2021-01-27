@@ -2,12 +2,17 @@
   <header class="header">
     <div class="header__space" />
     <div class="header__panel">
-      <app-container class="header__inner row items-center">
-        <div class="col-7 d-flex items-center">
+      <app-container
+        class="header__inner d-flex items-center content-space-between"
+      >
+        <div class="d-flex items-center">
           <app-logo class="mr-60" />
           <header-menu />
         </div>
-        <div class="col-5 d-flex content-flex-end items-center">
+        <div class="d-flex content-flex-end items-center">
+          <div class="header__lang">
+            <lang-widget />
+          </div>
           <ui-button>Вход | Регистрация</ui-button>
         </div>
       </app-container>
@@ -17,10 +22,12 @@
 
 <script>
 import HeaderMenu from '@/components/public-layout/HeaderMenu.vue'
+import LangWidget from '@/components/public-layout/LangWidget.vue'
 
 export default {
   components: {
     HeaderMenu,
+    LangWidget,
   },
 }
 </script>
@@ -42,4 +49,8 @@ export default {
 
   &__inner
     height: 100%
+
+  &__lang
+    height: 27px
+    margin-right: 78px
 </style>

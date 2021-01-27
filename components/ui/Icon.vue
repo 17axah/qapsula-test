@@ -22,7 +22,7 @@ export default {
 
 <style lang="sass" scoped>
 .ui-icon
-  display: inline-flex
+  display: block
 
   ::v-deep svg
     display: block
