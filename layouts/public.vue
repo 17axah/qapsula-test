@@ -1,5 +1,5 @@
 <template>
-  <page-layout>
+  <public-layout>
     <template #header>
       <public-header />
     </template>
@@ -11,17 +11,17 @@
     <template #footer>
       <public-footer />
     </template>
-  </page-layout>
+  </public-layout>
 </template>
 
 <script>
-import PageLayout from '@/components/layout/PageLayout.vue'
-import PublicHeader from '@/components/layout/PublicHeader.vue'
-import PublicFooter from '@/components/layout/PublicFooter.vue'
+import PublicLayout from '@/components/public-layout/Layout.vue'
+import PublicHeader from '@/components/public-layout/Header.vue'
+import PublicFooter from '@/components/public-layout/Footer.vue'
 
 export default {
   components: {
-    PageLayout,
+    PublicLayout,
     PublicHeader,
     PublicFooter,
   },

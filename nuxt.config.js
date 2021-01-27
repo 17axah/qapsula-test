@@ -41,13 +41,13 @@ export default {
         prefix: 'ui',
       },
       {
+        path: '@/components/transitions/',
+        prefix: 'transition',
+      },
+      {
         path: '@/components/icons/',
         prefix: 'icon',
         global: true,
-      },
-      {
-        path: '@/components/helpers/',
-        prefix: 'helper',
       },
       {
         path: '@/components/app/',

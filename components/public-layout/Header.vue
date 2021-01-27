@@ -2,25 +2,25 @@
   <header class="header">
     <div class="header__space" />
     <div class="header__panel">
-      <helper-wrapper class="header__inner row items-center">
+      <app-container class="header__inner row items-center">
         <div class="col-7 d-flex items-center">
           <app-logo class="mr-60" />
-          <public-menu />
+          <header-menu />
         </div>
         <div class="col-5 d-flex content-flex-end items-center">
           <ui-button>Вход | Регистрация</ui-button>
         </div>
-      </helper-wrapper>
+      </app-container>
     </div>
   </header>
 </template>
 
 <script>
-import PublicMenu from '@/components/layout/PublicMenu.vue'
+import HeaderMenu from '@/components/public-layout/HeaderMenu.vue'
 
 export default {
   components: {
-    PublicMenu,
+    HeaderMenu,
   },
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
-  <div class="page-layout">
+  <div class="layout">
     <slot name="header" />
-    <div class="page-layout__inner">
+    <div class="layout__inner">
       <slot name="body" />
     </div>
     <slot name="footer" />
@@ -9,7 +9,7 @@
 </template>
 
 <style lang="sass" scoped>
-.page-layout
+.layout
   display: flex
   min-height: 100vh
   flex-direction: column

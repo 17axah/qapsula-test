@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <helper-wrapper class="d-flex content-space-between">
+    <app-container class="d-flex content-space-between">
       <div>
         <nuxt-link to="/" class="clear-link d-block mb-14">
           <ui-icon name="qapsula" />
@@ -68,7 +68,7 @@
           />
         </a>
       </div>
-    </helper-wrapper>
+    </app-container>
   </footer>
 </template>
 

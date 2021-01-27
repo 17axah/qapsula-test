@@ -5,22 +5,17 @@
       <ui-icon v-if="icon" :name="icon" class="ui-expansion__icon" />
     </div>
     <div class="ui-expansion__content">
-      <collapse-transition>
+      <transition-collapse>
         <div v-if="is_open">
           <slot name="content" />
         </div>
-      </collapse-transition>
+      </transition-collapse>
     </div>
   </div>
 </template>
 
 <script>
-import CollapseTransition from '@/components/transitions/Collapse.vue'
-
 export default {
-  components: {
-    CollapseTransition,
-  },
   props: {
     icon: {
       type: String,
