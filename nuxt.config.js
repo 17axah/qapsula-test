@@ -19,6 +19,7 @@ export default {
   css: [
     '@/assets/styles/fonts.sass',
     '@/assets/styles/reset.sass',
+    '@/assets/styles/popover.sass',
     '@/assets/styles/transitions.sass',
     '@/assets/styles/spacing.sass',
     '@/assets/styles/grid.sass',
@@ -30,6 +31,7 @@ export default {
       src: '@/plugins/ripple',
       mode: 'client',
     },
+    '@/plugins/popover',
   ],
 
   components: {
