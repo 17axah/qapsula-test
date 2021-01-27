@@ -10,12 +10,12 @@ export default {
       default: false,
     },
     width: {
-      type: String,
-      default: '',
+      type: [String, Boolean],
+      default: false,
     },
     height: {
-      type: String,
-      default: '',
+      type: [String, Boolean],
+      default: false,
     },
   },
   computed: {
@@ -33,3 +33,11 @@ export default {
   },
 }
 </script>
+
+<style lang="sass" scoped>
+.ui-divider
+  border-left: 1px solid
+
+  &--horizontal
+    border-bottom: 1px solid
+</style>

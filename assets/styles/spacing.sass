@@ -1,7 +1,0 @@
-@include spaces('p')
-@include spaces('m')
-
-@each $bp, $size in $breakpoints
-  @media (min-width: $size)
-    @include spaces('p', $bp)
-    @include spaces('m', $bp)

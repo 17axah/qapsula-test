@@ -7,14 +7,23 @@
       >
         <div class="d-flex items-center">
           <app-logo class="mr-60" />
-          <header-menu />
+          <header-menu class="d-none d-md-block" />
         </div>
-        <div class="d-flex content-flex-end items-center">
+        <div class="d-none d-md-flex content-flex-end items-center">
           <div class="header__lang">
             <lang-widget />
           </div>
           <user-widget v-if="false" />
-          <ui-button v-else>Вход | Регистрация</ui-button>
+          <ui-button v-else color="primary">Вход | Регистрация</ui-button>
+        </div>
+        <div class="d-flex d-md-none content-flex-end items-center">
+          <ui-button class="text-primary" square="md">
+            <ui-icon name="user" />
+          </ui-button>
+          <ui-divider height="17px" class="text-blue-light-1 mh-10" />
+          <ui-button class="text-primary" square="md">
+            <ui-icon name="menu" />
+          </ui-button>
         </div>
       </app-container>
     </div>
@@ -39,7 +48,7 @@ export default {
 .header
   &__panel,
   &__space
-    height: 90px
+    height: 65px
 
   &__panel
     width: 100%
@@ -55,4 +64,10 @@ export default {
 
   &__lang
     margin-right: 78px
+
+@media (min-width: map-get($breakpoints, 'md'))
+  .header
+    &__panel,
+    &__space
+      height: 90px
 </style>

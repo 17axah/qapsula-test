@@ -17,8 +17,10 @@
 @include display()
 @include alignment()
 @include colors()
+@include spaces()
 
 @each $bp, $size in $breakpoints
   @media (min-width: $size)
     @include display($bp)
     @include alignment($bp)
+    @include spaces($bp)

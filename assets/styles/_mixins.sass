@@ -28,26 +28,44 @@
     .text#{$breakpoint}-#{$alignment}
       text-align: $alignment
 
-@mixin spaces($type, $breakpoint: false)
+@mixin spaces($breakpoint: false)
   $breakpoint: if($breakpoint,'-#{$breakpoint}','')
 
   @each $space in $spaces
-    .#{$type}a#{$breakpoint}-#{$space}
+    .ma#{$breakpoint}-#{$space}
       margin: #{$space}px
-    .#{$type}t#{$breakpoint}-#{$space}
+    .mt#{$breakpoint}-#{$space}
       margin-top: #{$space}px
-    .#{$type}b#{$breakpoint}-#{$space}
+    .mb#{$breakpoint}-#{$space}
       margin-bottom: #{$space}px
-    .#{$type}l#{$breakpoint}-#{$space}
+    .ml#{$breakpoint}-#{$space}
       margin-left: #{$space}px
-    .#{$type}r#{$breakpoint}-#{$space}
+    .mr#{$breakpoint}-#{$space}
       margin-right: #{$space}px
-    .#{$type}v#{$breakpoint}-#{$space}
+    .mv#{$breakpoint}-#{$space}
       margin-top: #{$space}px
       margin-bottom: #{$space}px
-    .#{$type}h#{$breakpoint}-#{$space}
+    .mh#{$breakpoint}-#{$space}
       margin-left: #{$space}px
       margin-right: #{$space}px
+
+  @each $space in $spaces
+    .pa#{$breakpoint}-#{$space}
+      padding: #{$space}px
+    .pt#{$breakpoint}-#{$space}
+      padding-top: #{$space}px
+    .pb#{$breakpoint}-#{$space}
+      padding-bottom: #{$space}px
+    .pl#{$breakpoint}-#{$space}
+      padding-left: #{$space}px
+    .pr#{$breakpoint}-#{$space}
+      padding-right: #{$space}px
+    .pv#{$breakpoint}-#{$space}
+      padding-top: #{$space}px
+      padding-bottom: #{$space}px
+    .ph#{$breakpoint}-#{$space}
+      padding-left: #{$space}px
+      padding-right: #{$space}px
 
 @mixin colors()
   @each $color_name, $color_value in $colors

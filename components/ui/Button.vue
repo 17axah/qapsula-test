@@ -1,9 +1,10 @@
 <template>
   <button
-    v-ripple
+    v-ripple="ripple"
     v-bind="$attrs"
     class="ui-button"
     :class="classes"
+    :style="styles"
     role="button"
     :type="type"
     :disabled="button_disabled"
@@ -38,7 +39,19 @@ export default {
     },
     color: {
       type: String,
-      default: 'primary',
+      default: '',
+    },
+    width: {
+      type: [String, Boolean],
+      default: false,
+    },
+    height: {
+      type: [String, Boolean],
+      default: false,
+    },
+    ripple: {
+      type: Boolean,
+      default: true,
     },
     outlined: {
       type: Boolean,
@@ -56,15 +69,43 @@ export default {
       type: Boolean,
       default: false,
     },
+    noPadding: {
+      type: Boolean,
+      default: false,
+    },
+    rounded: {
+      type: Boolean,
+      default: false,
+    },
+    shadowed: {
+      type: Boolean,
+      default: false,
+    },
+    square: {
+      type: String,
+      default: '',
+    },
   },
   computed: {
     classes() {
       return {
+        'ui-button--colored': !!this.color,
         'ui-button--primary': this.color === 'primary',
         'ui-button--outlined': this.outlined,
         'ui-button--disabled': this.disabled,
         'ui-button--loading': this.loading,
         'ui-button--fluid': this.fluid,
+        'ui-button--no-padding': this.noPadding,
+        'ui-button--rounded': this.rounded,
+        'ui-button--shadowed': this.rounded,
+        'ui-button--square': !!this.square,
+        'ui-button--square-md': this.square === 'md',
+      }
+    },
+    styles() {
+      return {
+        width: this.width,
+        height: this.height,
       }
     },
     button_disabled() {
@@ -120,8 +161,30 @@ export default {
     #{$parent}__inner
       opacity: 0
 
-  &:hover:not(&--loading):not(&--disabled)
-    box-shadow: 0 5px 10px rgba(51, 51, 51, 0.25)
+  &--colored
+    &:hover
+      &:not(#{$parent}--loading),
+      &:not(#{$parent}--disabled)
+        box-shadow: 0 5px 10px rgba(51, 51, 51, 0.25)
+
+    #{$parent}__label
+      margin-bottom: 2px
+
+  &--square,
+  &--no-padding
+    #{$parent}__inner
+      padding: 0
+
+  &--rounded
+    border-radius: 100%
+
+  &--shadowed
+    box-shadow: 0px 2px 20px rgba(51, 51, 51, 0.1)
+
+  &--square
+    &-md
+      width: 46px
+      height: 46px
 
   &__inner
     display: flex
@@ -130,9 +193,6 @@ export default {
     justify-content: center
     align-items: center
     transition: opacity 0.2s
-
-  &__label
-    margin-bottom: 2px
 
   &__icon
     margin-left: 12px

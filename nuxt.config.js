@@ -21,7 +21,6 @@ export default {
     '@/assets/styles/reset.sass',
     '@/assets/styles/popover.sass',
     '@/assets/styles/transitions.sass',
-    '@/assets/styles/spacing.sass',
     '@/assets/styles/grid.sass',
     '@/assets/styles/helpers.sass',
   ],
