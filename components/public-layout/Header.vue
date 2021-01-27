@@ -18,7 +18,7 @@
         </div>
         <div class="d-flex d-md-none content-flex-end items-center">
           <ui-button class="text-primary" square="md">
-            <ui-icon name="user" />
+            <ui-icon name="user" size="sm" />
           </ui-button>
           <ui-divider height="17px" class="text-blue-light-1 mh-10" />
           <ui-button class="text-primary" square="md">

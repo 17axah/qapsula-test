@@ -1,7 +1,7 @@
 <template>
   <svg
-    width="24"
-    height="28"
+    class="user-icon"
+    :class="classes"
     viewBox="0 0 24 28"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -16,3 +16,33 @@
     />
   </svg>
 </template>
+
+<script>
+export default {
+  props: {
+    size: {
+      type: String,
+      default: 'md',
+    },
+  },
+  computed: {
+    classes() {
+      return {
+        'user-icon--md': this.size === 'md',
+        'user-icon--sm': this.size === 'sm',
+      }
+    },
+  },
+}
+</script>
+
+<style lang="sass" scoped>
+.user-icon
+  &--md
+    width: 24px
+    height: 28px
+
+  &--sm
+    width: 18px
+    height: 21px
+</style>

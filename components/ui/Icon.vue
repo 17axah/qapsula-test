@@ -1,6 +1,6 @@
 <template>
   <div class="ui-icon" aria-hidden="true" role="presentation">
-    <component :is="component" />
+    <component :is="component" :size="size" />
   </div>
 </template>
 
@@ -10,6 +10,10 @@ export default {
     name: {
       type: String,
       required: true,
+    },
+    size: {
+      type: String,
+      default: '',
     },
   },
   computed: {
