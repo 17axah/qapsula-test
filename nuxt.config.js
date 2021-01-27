@@ -58,7 +58,6 @@ export default {
 
   buildModules: [
     '@nuxtjs/eslint-module',
-    '@nuxtjs/stylelint-module',
   ],
 
   modules: [

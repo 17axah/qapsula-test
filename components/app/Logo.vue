@@ -1,33 +1,21 @@
 <template>
   <nuxt-link to="/" class="logo">
-    <img
-      src="@/assets/images/logo.svg"
-      alt="qapsula"
-      :width="width"
-      :height="height"
-    />
+    <img src="@/assets/images/logo.svg" alt="qapsula" />
   </nuxt-link>
 </template>
-
-<script>
-export default {
-  props: {
-    width: {
-      type: String,
-      default: '141px',
-    },
-    height: {
-      type: String,
-      default: '42px',
-    },
-  },
-}
-</script>
 
 <style lang="sass" scoped>
 .logo
   display: block
 
   & img
+    width: 90px
+    height: 27px
     display: block
+
+@media (min-width: map-get($breakpoints, 'md'))
+  .logo
+    & img
+      width: 141px
+      height: 42px
 </style>
