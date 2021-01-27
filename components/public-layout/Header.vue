@@ -54,6 +54,5 @@ export default {
     height: 100%
 
   &__lang
-    height: 27px
     margin-right: 78px
 </style>
