@@ -1,5 +1,5 @@
 <template>
-  <v-popover class="lang-widget" offset="22">
+  <v-popover class="lang-widget" offset="17">
     <div class="lang-widget__trigger">
       <div class="lang-widget__icon">
         <ui-icon name="planet" />

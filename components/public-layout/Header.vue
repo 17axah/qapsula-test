@@ -13,7 +13,8 @@
           <div class="header__lang">
             <lang-widget />
           </div>
-          <ui-button>Вход | Регистрация</ui-button>
+          <user-widget v-if="false" />
+          <ui-button v-else>Вход | Регистрация</ui-button>
         </div>
       </app-container>
     </div>
@@ -23,11 +24,13 @@
 <script>
 import HeaderMenu from '@/components/public-layout/HeaderMenu.vue'
 import LangWidget from '@/components/public-layout/LangWidget.vue'
+import UserWidget from '@/components/public-layout/UserWidget.vue'
 
 export default {
   components: {
     HeaderMenu,
     LangWidget,
+    UserWidget,
   },
 }
 </script>

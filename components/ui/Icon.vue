@@ -23,6 +23,7 @@ export default {
 <style lang="sass" scoped>
 .ui-icon
   display: block
+  transition: all 0.2s
 
   ::v-deep svg
     display: block
