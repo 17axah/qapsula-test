@@ -5,7 +5,7 @@
         <nav class="mobile-menu__nav">
           <div class="mobile-menu__title">Меню:</div>
 
-          <template>
+          <template v-if="!!user">
             <ul class="menu-list">
               <li
                 v-for="(link, index) in userMenu"
@@ -52,7 +52,7 @@
             </li>
           </ul>
 
-          <ui-button color="primary" no-padding fluid>
+          <ui-button v-if="!user" color="primary" no-padding fluid>
             Вход | Регистрация
           </ui-button>
         </nav>
@@ -81,6 +81,10 @@ export default {
     value: {
       type: Boolean,
       default: false,
+    },
+    user: {
+      type: [Object, Boolean],
+      required: true,
     },
     menu: {
       type: Array,

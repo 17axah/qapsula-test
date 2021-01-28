@@ -13,21 +13,27 @@
           <div class="header__lang">
             <lang-widget />
           </div>
-          <user-widget v-if="true" :menu="user_menu" />
+          <user-widget v-if="!!user" :menu="user_menu" />
           <ui-button v-else color="primary">Вход | Регистрация</ui-button>
         </div>
+
         <div class="d-flex d-md-none content-flex-end items-center">
-          <ui-button class="text-primary" square="md">
-            <ui-icon name="user" size="sm" />
-          </ui-button>
-          <ui-divider height="17px" class="text-blue-light-1 mh-10" />
-          <ui-button
-            class="text-primary"
-            square="md"
-            @click="show_mobile_menu = true"
-          >
-            <ui-icon name="menu" />
-          </ui-button>
+          <div v-if="!!user" @click="show_mobile_menu = true">
+            <user-widget :menu="user_menu" mobile />
+          </div>
+          <template v-else>
+            <ui-button class="text-primary" square="md">
+              <ui-icon name="user" size="sm" />
+            </ui-button>
+            <ui-divider height="17px" class="text-blue-light-1 mh-10" />
+            <ui-button
+              class="text-primary"
+              square="md"
+              @click="show_mobile_menu = true"
+            >
+              <ui-icon name="menu" />
+            </ui-button>
+          </template>
         </div>
       </app-container>
     </div>
@@ -35,6 +41,7 @@
     <mobile-menu
       v-model="show_mobile_menu"
       :menu="menu"
+      :user="user"
       :user-menu="user_menu"
       :additional-menu="additional_menu"
       class="d-md-none"
@@ -58,6 +65,7 @@ export default {
   data() {
     return {
       show_mobile_menu: false,
+      user: {},
       menu: [
         {
           label: 'База знаний',

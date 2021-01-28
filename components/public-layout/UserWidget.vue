@@ -1,12 +1,18 @@
 <template>
-  <v-popover class="user-widget" popover-class="no-padding-inner" offset="17">
+  <v-popover
+    class="user-widget"
+    :class="classes"
+    popover-class="no-padding-inner"
+    offset="17"
+    :disabled="mobile"
+  >
     <div class="user-widget__trigger">
       <div>Юлия</div>
       <div class="user-widget__icon user-widget__icon--chevron">
         <ui-icon name="chevron-down" class="user-widget__chevron" />
       </div>
       <div class="user-widget__avatar">
-        <ui-icon name="user" />
+        <ui-icon name="user" :size="mobile ? 'sm' : ''" />
       </div>
     </div>
 
@@ -26,9 +32,20 @@
 <script>
 export default {
   props: {
+    mobile: {
+      type: Boolean,
+      default: false,
+    },
     menu: {
       type: Array,
       required: true,
+    },
+  },
+  computed: {
+    classes() {
+      return {
+        'user-widget--mobile': this.mobile,
+      }
     },
   },
 }
@@ -73,4 +90,12 @@ export default {
   &__icon
     color: $color-primary
     margin-right: 15px
+
+  &--mobile
+    font-size: 12px
+    line-height: 16px
+
+    #{$parent}__avatar
+      width: 41px
+      height: 41px
 </style>
