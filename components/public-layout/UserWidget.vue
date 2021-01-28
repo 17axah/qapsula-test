@@ -21,7 +21,7 @@
         <li v-for="(link, index) in menu" :key="index" class="mb-5">
           <a :href="link.path" class="menu-list__link pv-13 ph-36">
             <ui-icon :name="link.icon" class="menu-list__icon" />
-            <div>{{ link.label }}</div>
+            <div>{{ $t(link.locale) }}</div>
           </a>
         </li>
       </ul>

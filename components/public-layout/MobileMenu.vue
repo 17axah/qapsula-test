@@ -3,7 +3,7 @@
     <div v-if="value" v-scroll-lock="value" class="mobile-menu">
       <div class="mobile-menu__panel">
         <nav class="mobile-menu__nav">
-          <div class="mobile-menu__title">Меню:</div>
+          <div class="mobile-menu__title">{{ $t('menu') }}:</div>
 
           <template v-if="!!user">
             <ul class="menu-list">
@@ -15,7 +15,7 @@
               >
                 <a :href="link.path" class="menu-list__link">
                   <ui-icon :name="link.icon" class="menu-list__icon" />
-                  <div>{{ link.label }}</div>
+                  <div>{{ $t(link.locale) }}</div>
                 </a>
               </li>
             </ul>
@@ -27,7 +27,7 @@
             <li v-for="(link, index) in menu" :key="index" class="mb-24">
               <a :href="link.path" class="menu-list__link">
                 <ui-icon :name="link.icon" class="menu-list__icon" />
-                <div>{{ link.label }}</div>
+                <div>{{ $t(link.locale) }}</div>
               </a>
               <ui-divider
                 v-if="link.highlight"
@@ -47,13 +47,13 @@
             >
               <a :href="link.path" class="menu-list__link">
                 <ui-icon :name="link.icon" class="menu-list__icon" />
-                <div>{{ link.label }}</div>
+                <div>{{ $t(link.locale) }}</div>
               </a>
             </li>
           </ul>
 
           <ui-button v-if="!user" color="primary" no-padding fluid>
-            Вход | Регистрация
+            {{ $t('signin_or_signup') }}
           </ui-button>
         </nav>
 

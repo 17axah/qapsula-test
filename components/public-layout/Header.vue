@@ -14,7 +14,9 @@
             <lang-widget />
           </div>
           <user-widget v-if="!!user" :menu="user_menu" />
-          <ui-button v-else color="primary">Вход | Регистрация</ui-button>
+          <ui-button v-else color="primary">
+            {{ $t('signin_or_signup') }}
+          </ui-button>
         </div>
 
         <div class="d-flex d-md-none content-flex-end items-center">
@@ -68,23 +70,23 @@ export default {
       user: {},
       menu: [
         {
-          label: 'База знаний',
+          locale: 'knowledge_base',
           icon: 'list',
           path: '#',
           highlight: true,
         },
         {
-          label: 'О нас',
+          locale: 'about',
           icon: 'warning',
           path: '#',
         },
         {
-          label: 'Пациентам',
+          locale: 'for_patients',
           icon: 'user-outline',
           path: '#',
         },
         {
-          label: 'Врачам',
+          locale: 'for_doctors',
           icon: 'doctor',
           path: '#',
         },
@@ -93,39 +95,39 @@ export default {
         {
           path: '#',
           icon: 'user-outline',
-          label: 'Профиль',
+          locale: 'profile',
         },
         {
           path: '#',
           icon: 'search',
-          label: 'Поиск врача',
+          locale: 'find_a_doctor',
         },
         {
           path: '#',
           icon: 'message',
-          label: 'Консультации',
+          locale: 'consulting',
         },
         {
           path: '#',
           icon: 'settings',
-          label: 'Настройки',
+          locale: 'settings',
         },
         {
           path: '#',
           icon: 'exit',
-          label: 'Выход',
+          locale: 'exit',
         },
       ],
       additional_menu: [
         {
           path: '#',
           icon: 'warning',
-          label: 'Помощь',
+          locale: 'help',
         },
         {
           path: '#',
           icon: 'like',
-          label: 'Обратная связь',
+          locale: 'feedback',
         },
       ],
     }

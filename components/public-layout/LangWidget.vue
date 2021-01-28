@@ -7,37 +7,19 @@
       <div class="lang-widget__icon lang-widget__icon--chevron">
         <ui-icon name="chevron-down" class="lang-widget__chevron" />
       </div>
-      <div>Русский</div>
+      <div>{{ current_local.name }}</div>
     </div>
 
     <template #popover>
       <ul class="langs">
-        <li class="langs__item">
-          <a href="#" class="langs__link active">Русский</a>
-        </li>
-        <li class="langs__item">
-          <a href="#" class="langs__link">English</a>
-        </li>
-        <li class="langs__item">
-          <a href="#" class="langs__link">Deutsch</a>
-        </li>
-        <li class="langs__item">
-          <a href="#" class="langs__link">Türk</a>
-        </li>
-        <li class="langs__item">
-          <a href="#" class="langs__link">Indonesia</a>
-        </li>
-        <li class="langs__item">
-          <a href="#" class="langs__link">Português</a>
-        </li>
-        <li class="langs__item">
-          <a href="#" class="langs__link">Français</a>
-        </li>
-        <li class="langs__item">
-          <a href="#" class="langs__link">Español</a>
-        </li>
-        <li class="langs__item">
-          <a href="#" class="langs__link">עברית</a>
+        <li v-for="locale in locales" :key="locale.code" class="langs__item">
+          <nuxt-link
+            :to="switchLocalePath(locale.code)"
+            class="langs__link"
+            :class="{ active: locale.code === current_local.code }"
+          >
+            {{ locale.name }}
+          </nuxt-link>
         </li>
       </ul>
     </template>
@@ -57,6 +39,12 @@ export default {
       return {
         'lang-widget--white': this.white,
       }
+    },
+    locales() {
+      return this.$i18n.locales
+    },
+    current_local() {
+      return this.$i18n.locales.find(({ code }) => code === this.$i18n.locale)
     },
   },
 }

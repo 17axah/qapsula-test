@@ -8,7 +8,7 @@
         :class="{ highlight: link.highlight }"
       >
         <a :href="link.path" class="menu__link">
-          {{ link.label }}
+          {{ $t(link.locale) }}
         </a>
       </li>
     </ul>

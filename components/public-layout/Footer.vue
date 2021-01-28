@@ -4,7 +4,7 @@
       <nav class="footer__nav">
         <div class="d-none d-md-flex content-space-between">
           <div v-for="(item, item_index) in menu_links" :key="item_index">
-            <div class="text-subtitle-1 mb-10">{{ item.title }}</div>
+            <div class="text-subtitle-1 mb-10">{{ $t(item.locale) }}</div>
             <ul class="footer-menu-list">
               <li
                 v-for="(link, link_index) in item.items"
@@ -12,7 +12,7 @@
                 class="footer-menu-list__item"
               >
                 <a :href="link.path" class="footer-menu-list__link">
-                  {{ link.label }}
+                  {{ $t(link.locale) }}
                 </a>
               </li>
             </ul>
@@ -27,7 +27,7 @@
           >
             <ui-expansion trigger-class="content-center">
               <template #trigger>
-                <div class="text-subtitle-1 pb-5">{{ item.title }}</div>
+                <div class="text-subtitle-1 pb-5">{{ $t(item.locale) }}</div>
               </template>
               <template #content>
                 <ul class="footer-menu-list pt-10">
@@ -37,7 +37,7 @@
                     class="footer-menu-list__item"
                   >
                     <a :href="link.path" class="footer-menu-list__link">
-                      {{ link.label }}
+                      {{ $t(link.locale) }}
                     </a>
                   </li>
                 </ul>
@@ -64,7 +64,7 @@
               class="location-links__link fs-12 fs-md-16"
             >
               <ui-icon :name="link.icon" class="location-links__icon" />
-              <div>{{ link.label }}</div>
+              <div>{{ link.locale ? $t(link.locale) : link.label }}</div>
             </a>
           </li>
         </ul>
@@ -90,8 +90,8 @@
               <ui-icon name="qapsula" />
             </nuxt-link>
             <div class="text-body-1 text-grey">
-              © 2020 ООО «Капсула». <br />
-              Все права защищены.
+              {{ $t('copyright') }}. <br />
+              {{ $t('rights_reserved') }}.
             </div>
           </div>
         </div>
@@ -129,61 +129,61 @@ export default {
       ],
       menu_links: [
         {
-          title: 'О нас',
+          locale: 'about',
           items: [
             {
               path: '#',
-              label: 'Компания',
+              locale: 'company',
             },
             {
               path: '#',
-              label: 'Контакты',
+              locale: 'contacts',
             },
             {
               path: '#',
-              label: 'Правовая информация',
+              locale: 'legal_information',
             },
           ],
         },
         {
-          title: 'Пациентам',
+          locale: 'for_patients',
           items: [
             {
               path: '#',
-              label: 'Возможности',
+              locale: 'opportunities',
             },
             {
               path: '#',
-              label: 'Задать вопрос врачу',
+              locale: 'ask_a_doctor',
             },
             {
               path: '#',
-              label: 'Помощь',
+              locale: 'help',
             },
             {
               path: '#',
-              label: 'Обратная связь',
+              locale: 'feedback',
             },
           ],
         },
         {
-          title: 'Врачам',
+          locale: 'for_doctors',
           items: [
             {
               path: '#',
-              label: 'Возможности',
+              locale: 'opportunities',
             },
             {
               path: '#',
-              label: 'Стать консультантом',
+              locale: 'become_a_consultant',
             },
             {
               path: '#',
-              label: 'Помощь',
+              locale: 'help',
             },
             {
               path: '#',
-              label: 'Обратная связь',
+              locale: 'feedback',
             },
           ],
         },
@@ -192,7 +192,7 @@ export default {
         {
           path: 'https://goo.gl/maps/DTFUBoubwjZbtjjh8',
           icon: 'location',
-          label: 'Москва, Новый Арбат, 21',
+          locale: '$location',
           target: '_blank',
         },
         {
