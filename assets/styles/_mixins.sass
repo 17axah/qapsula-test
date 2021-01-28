@@ -13,6 +13,15 @@
     .d#{$breakpoint}-#{$display_value}
       display: $display_value
 
+@mixin orders($breakpoint: false)
+  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
+
+  .order#{$breakpoint}-first
+    order: -1
+
+  .order#{$breakpoint}-last
+    order: 1
+
 @mixin alignment($breakpoint: false)
   $breakpoint: if($breakpoint,'-#{$breakpoint}','')
 
