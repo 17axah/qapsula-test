@@ -81,7 +81,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    square: {
+    static: {
       type: String,
       default: '',
     },
@@ -97,9 +97,9 @@ export default {
         'ui-button--fluid': this.fluid,
         'ui-button--no-padding': this.noPadding,
         'ui-button--rounded': this.rounded,
-        'ui-button--shadowed': this.rounded,
-        'ui-button--square': !!this.square,
-        'ui-button--square-md': this.square === 'md',
+        'ui-button--shadowed': this.shadowed,
+        'ui-button--static': !!this.static,
+        'ui-button--static-md': this.static === 'md',
       }
     },
     styles() {
@@ -125,7 +125,7 @@ export default {
   align-items: center
   justify-content: center
   position: relative
-  background: none
+  background: $color-white
   border: none
   outline: none
   cursor: pointer
@@ -170,7 +170,7 @@ export default {
     #{$parent}__label
       margin-bottom: 2px
 
-  &--square,
+  &--static,
   &--no-padding
     #{$parent}__inner
       padding: 0
@@ -181,7 +181,7 @@ export default {
   &--shadowed
     box-shadow: 0px 2px 20px rgba(51, 51, 51, 0.1)
 
-  &--square
+  &--static
     &-md
       width: 46px
       height: 46px

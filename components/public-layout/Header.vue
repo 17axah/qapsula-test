@@ -21,12 +21,18 @@
             <ui-icon name="user" size="sm" />
           </ui-button>
           <ui-divider height="17px" class="text-blue-light-1 mh-10" />
-          <ui-button class="text-primary" square="md">
+          <ui-button
+            class="text-primary"
+            square="md"
+            @click="mobile_menu = true"
+          >
             <ui-icon name="menu" />
           </ui-button>
         </div>
       </app-container>
     </div>
+
+    <mobile-menu v-model="mobile_menu" class="d-md-none" />
   </header>
 </template>
 
@@ -34,12 +40,19 @@
 import HeaderMenu from '@/components/public-layout/HeaderMenu.vue'
 import LangWidget from '@/components/public-layout/LangWidget.vue'
 import UserWidget from '@/components/public-layout/UserWidget.vue'
+import MobileMenu from '@/components/public-layout/MobileMenu.vue'
 
 export default {
   components: {
     HeaderMenu,
     LangWidget,
     UserWidget,
+    MobileMenu,
+  },
+  data() {
+    return {
+      mobile_menu: false,
+    }
   },
 }
 </script>

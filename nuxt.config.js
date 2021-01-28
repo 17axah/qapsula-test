@@ -31,6 +31,7 @@ export default {
       mode: 'client',
     },
     '@/plugins/popover',
+    '@/plugins/body-scroll-lock',
   ],
 
   components: {
