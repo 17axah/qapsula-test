@@ -22,6 +22,29 @@
   &:last-child
     margin-bottom: 0
 
+.menu-list
+  $parent: &
+
+  &__link
+    display: flex
+    align-items: center
+    text-decoration: none
+    font-weight: 600
+    color: currentColor
+
+  &__icon
+    color: $color-primary
+    margin-right: 15px
+
+  &--hovered
+    #{$parent}__link
+      &:hover
+        background-color: $color-primary
+        color: $color-white
+
+        #{$parent}__icon
+          color: $color-white
+
 @include display()
 @include alignment()
 @include colors()

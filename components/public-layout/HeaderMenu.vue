@@ -2,10 +2,10 @@
   <nav class="menu">
     <ul class="menu__list">
       <li
-        v-for="(link, index) in links"
+        v-for="(link, index) in menu"
         :key="index"
         class="menu__item"
-        :class="{ active: link.active }"
+        :class="{ highlight: link.highlight }"
       >
         <a :href="link.path" class="menu__link">
           {{ link.label }}
@@ -17,28 +17,11 @@
 
 <script>
 export default {
-  data() {
-    return {
-      links: [
-        {
-          label: 'База знаний',
-          path: '/',
-          active: true,
-        },
-        {
-          label: 'О нас',
-          path: '/',
-        },
-        {
-          label: 'Пациентам',
-          path: '/',
-        },
-        {
-          label: 'Врачам',
-          path: '/',
-        },
-      ],
-    }
+  props: {
+    menu: {
+      type: Array,
+      required: true,
+    },
   },
 }
 </script>
@@ -52,7 +35,7 @@ export default {
     align-items: center
 
   &__item
-    &.active
+    &.highlight
       margin-right: 12px
 
       &:last-child

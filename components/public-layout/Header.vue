@@ -7,13 +7,13 @@
       >
         <div class="d-flex items-center">
           <app-logo class="mr-60" />
-          <header-menu class="d-none d-md-block" />
+          <header-menu :menu="menu" class="d-none d-md-block" />
         </div>
         <div class="d-none d-md-flex content-flex-end items-center">
           <div class="header__lang">
             <lang-widget />
           </div>
-          <user-widget v-if="false" />
+          <user-widget v-if="true" :menu="user_menu" />
           <ui-button v-else color="primary">Вход | Регистрация</ui-button>
         </div>
         <div class="d-flex d-md-none content-flex-end items-center">
@@ -24,7 +24,7 @@
           <ui-button
             class="text-primary"
             square="md"
-            @click="mobile_menu = true"
+            @click="show_mobile_menu = true"
           >
             <ui-icon name="menu" />
           </ui-button>
@@ -32,7 +32,13 @@
       </app-container>
     </div>
 
-    <mobile-menu v-model="mobile_menu" class="d-md-none" />
+    <mobile-menu
+      v-model="show_mobile_menu"
+      :menu="menu"
+      :user-menu="user_menu"
+      :additional-menu="additional_menu"
+      class="d-md-none"
+    />
   </header>
 </template>
 
@@ -51,7 +57,69 @@ export default {
   },
   data() {
     return {
-      mobile_menu: false,
+      show_mobile_menu: false,
+      menu: [
+        {
+          label: 'База знаний',
+          icon: 'list',
+          path: '#',
+          highlight: true,
+        },
+        {
+          label: 'О нас',
+          icon: 'warning',
+          path: '#',
+        },
+        {
+          label: 'Пациентам',
+          icon: 'user-outline',
+          path: '#',
+        },
+        {
+          label: 'Врачам',
+          icon: 'doctor',
+          path: '#',
+        },
+      ],
+      user_menu: [
+        {
+          path: '#',
+          icon: 'user-outline',
+          label: 'Профиль',
+        },
+        {
+          path: '#',
+          icon: 'search',
+          label: 'Поиск врача',
+        },
+        {
+          path: '#',
+          icon: 'message',
+          label: 'Консультации',
+        },
+        {
+          path: '#',
+          icon: 'settings',
+          label: 'Настройки',
+        },
+        {
+          path: '#',
+          icon: 'exit',
+          label: 'Выход',
+        },
+      ],
+      additional_menu: [
+        {
+          path: '#',
+          icon: 'warning',
+          label: 'Помощь',
+        },
+        {
+          path: '#',
+          icon: 'like',
+          label: 'Обратная связь',
+        },
+      ],
     }
   },
 }

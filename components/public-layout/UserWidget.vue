@@ -11,18 +11,11 @@
     </div>
 
     <template #popover>
-      <ul class="user-menu">
-        <li v-for="(link, index) in links" :key="index" class="user-menu__item">
-          <a :href="link.path" class="user-menu__link">
-            <ui-icon :name="link.icon" class="user-menu__icon" />
+      <ul class="menu-list menu-list--hovered pv-14">
+        <li v-for="(link, index) in menu" :key="index" class="mb-5">
+          <a :href="link.path" class="menu-list__link pv-13 ph-36">
+            <ui-icon :name="link.icon" class="menu-list__icon" />
             <div>{{ link.label }}</div>
-          </a>
-        </li>
-
-        <li class="user-menu__item">
-          <a href="#" class="user-menu__link">
-            <ui-icon name="exit" class="user-menu__icon" />
-            <div>Выход</div>
           </a>
         </li>
       </ul>
@@ -32,31 +25,11 @@
 
 <script>
 export default {
-  data() {
-    return {
-      links: [
-        {
-          path: '#',
-          icon: 'user-outline',
-          label: 'Профиль',
-        },
-        {
-          path: '#',
-          icon: 'search',
-          label: 'Поиск врача',
-        },
-        {
-          path: '#',
-          icon: 'message',
-          label: 'Консультации',
-        },
-        {
-          path: '#',
-          icon: 'settings',
-          label: 'Настройки',
-        },
-      ],
-    }
+  props: {
+    menu: {
+      type: Array,
+      required: true,
+    },
   },
 }
 </script>
@@ -96,29 +69,6 @@ export default {
   &.open
     #{$parent}__chevron
       transform: rotate(180deg)
-
-.user-menu
-  $parent: &
-
-  padding: 14px 0
-
-  &__item
-    padding-bottom: 6px
-
-  &__link
-    display: flex
-    padding: 13px 36px
-    align-items: center
-    text-decoration: none
-    font-weight: 600
-    color: currentColor
-
-    &:hover
-      background-color: $color-primary
-      color: $color-white
-
-      #{$parent}__icon
-        color: $color-white
 
   &__icon
     color: $color-primary
