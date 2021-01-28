@@ -65,6 +65,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     'nuxt-mq',
+    'nuxt-i18n',
   ],
 
   mq: {
@@ -74,6 +75,26 @@ export default {
       md: 1024,
       lg: 1200,
     },
+  },
+
+  i18n: {
+    lazy: true,
+    defaultLocale: 'ru',
+    langDir: 'lang/',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        name: 'English',
+        file: 'en-US.js',
+      },
+      {
+        code: 'ru',
+        iso: 'ru-RU',
+        name: 'Русский',
+        file: 'ru-RU.js',
+      },
+    ],
   },
 
   axios: {},
