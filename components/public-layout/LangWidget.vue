@@ -1,5 +1,5 @@
 <template>
-  <v-popover class="lang-widget" offset="17">
+  <v-popover class="lang-widget" :class="classes" offset="17">
     <div class="lang-widget__trigger">
       <div class="lang-widget__icon">
         <ui-icon name="planet" />
@@ -44,6 +44,24 @@
   </v-popover>
 </template>
 
+<script>
+export default {
+  props: {
+    white: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  computed: {
+    classes() {
+      return {
+        'lang-widget--white': this.white,
+      }
+    },
+  },
+}
+</script>
+
 <style lang="sass" scoped>
 .lang-widget
   $parent: &
@@ -69,6 +87,10 @@
   &.open
     #{$parent}__chevron
       transform: rotate(180deg)
+
+  &--white
+    #{$parent}__icon
+      color: $color-white
 
 .langs
   $parent: &

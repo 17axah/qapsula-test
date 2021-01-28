@@ -76,6 +76,13 @@
       padding-left: #{$space}px
       padding-right: #{$space}px
 
+@mixin font-size($breakpoint: false)
+  $breakpoint: if($breakpoint,'-#{$breakpoint}','')
+
+  @each $size in $font-sizes
+    .fs#{$breakpoint}-#{$size}
+      font-size: #{$size}px
+
 @mixin colors()
   @each $color_name, $color_value in $colors
     .text-#{'' + $color_name}

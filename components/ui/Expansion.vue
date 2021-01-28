@@ -1,6 +1,6 @@
 <template>
   <div class="ui-expansion" :class="classes">
-    <div class="ui-expansion__trigger" @click="toggle">
+    <div class="ui-expansion__trigger" :class="triggerClass" @click="toggle">
       <slot name="trigger" />
       <ui-icon v-if="icon" :name="icon" class="ui-expansion__icon" />
     </div>
@@ -24,6 +24,10 @@ export default {
     value: {
       type: Boolean,
       default: false,
+    },
+    triggerClass: {
+      type: [Array, String, Object],
+      default: '',
     },
   },
   data() {

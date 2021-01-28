@@ -14,11 +14,20 @@
 .rounded
   border-radius: $base-border-radius
 
+.last-mr-0
+  &:last-child
+    margin-right: 0
+
+.last-mb-0
+  &:last-child
+    margin-bottom: 0
+
 @include display()
 @include alignment()
 @include colors()
 @include spaces()
 @include orders()
+@include font-size()
 
 @each $bp, $size in $breakpoints
   @media (min-width: $size)
@@ -26,3 +35,4 @@
     @include alignment($bp)
     @include spaces($bp)
     @include orders($bp)
+    @include font-size($bp)
