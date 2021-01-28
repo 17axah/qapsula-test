@@ -1,8 +1,11 @@
 <template>
-  <button
+  <component
+    :is="tag"
     v-ripple="ripple"
     v-bind="$attrs"
     class="ui-button"
+    :to="to"
+    :href="href"
     :class="classes"
     :style="styles"
     role="button"
@@ -23,7 +26,7 @@
         <ui-loading size="100%" />
       </div>
     </transition>
-  </button>
+  </component>
 </template>
 
 <script>
@@ -31,6 +34,14 @@ export default {
   props: {
     appendIcon: {
       type: String,
+      default: '',
+    },
+    href: {
+      type: String,
+      default: '',
+    },
+    to: {
+      type: [Object, String],
       default: '',
     },
     type: {
@@ -111,6 +122,15 @@ export default {
     button_disabled() {
       return this.disabled || this.loading
     },
+    tag() {
+      if (this.href) {
+        return 'a'
+      } else if (this.to) {
+        return 'nuxt-link'
+      } else {
+        return 'button'
+      }
+    },
   },
 }
 </script>
@@ -134,6 +154,7 @@ export default {
   font-family: $base-font-family
   font-size: $base-font-size
   line-height: $base-line-height
+  text-decoration: none
   transition: all 0.2s
 
   &--primary
