@@ -50,7 +50,7 @@ export default {
   },
   provide() {
     return {
-      $_has_errors: () => {
+      $_hasErrors: () => {
         return this.$refs.validator?.errors.length
       },
     }

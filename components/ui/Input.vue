@@ -60,7 +60,7 @@ export default {
   },
   inheritAttrs: false,
   inject: {
-    $_has_errors: {
+    $_hasErrors: {
       type: Function,
       default: () => () => false,
     },
@@ -161,7 +161,7 @@ export default {
         'ui-input--focus': this.focusable,
         'ui-input--textarea': this.textarea,
         'ui-input--disabled': this.disabled,
-        'ui-input--error': this.$_has_errors() || this.error,
+        'ui-input--error': this.$_hasErrors() || this.error,
       }
     },
     field_tag() {

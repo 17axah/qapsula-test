@@ -1,5 +1,5 @@
 <template>
   <div>
-    <div>index page {{ value }}</div>
+    <div>index page</div>
   </div>
 </template>
