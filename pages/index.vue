@@ -2,6 +2,10 @@
   <div>
     <div>index page {{ value }}</div>
     <div class="pa-20">
+      <ui-validator name="email" rules="required">
+        <ui-input v-model="textarea" />
+      </ui-validator>
+
       <ui-input
         v-model="value"
         placeholder="Email"

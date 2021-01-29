@@ -32,6 +32,7 @@ export default {
     },
     '@/plugins/popover',
     '@/plugins/body-scroll-lock',
+    '@/plugins/validation',
   ],
 
   components: {
@@ -99,5 +100,7 @@ export default {
 
   axios: {},
 
-  build: {},
+  build: {
+    transpile: ['vee-validate/dist/rules'],
+  },
 }
