@@ -61,6 +61,7 @@
             <a
               :href="link.path"
               :target="link.target"
+              rel="noreferrer"
               class="location-links__link fs-12 fs-md-16"
             >
               <ui-icon :name="link.icon" class="location-links__icon" />
@@ -75,6 +76,7 @@
               v-for="(link, index) in social_links"
               :key="index"
               :href="link.path"
+              :aria-label="link.name"
               class="clear-link mr-20 last-mr-0"
             >
               <ui-icon :name="link.icon" />
@@ -113,18 +115,22 @@ export default {
         {
           path: '#',
           icon: 'instagram',
+          name: 'Instagram',
         },
         {
           path: '#',
           icon: 'facebook',
+          name: 'Facebook',
         },
         {
           path: '#',
           icon: 'vk',
+          name: 'vk.com',
         },
         {
           path: '#',
           icon: 'youtube',
+          name: 'Youtube',
         },
       ],
       menu_links: [

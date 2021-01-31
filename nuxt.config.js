@@ -4,7 +4,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Qapsula – это уникальный сервис, который позволяет получить онлайн консультацию врача или бесплатно задать вопрос. На портале круглосуточно работают более 900 врачей: гинекологи, дерматологи, ЛОР-врачи, неврологи, терапевты, педиатры, урологи, онкологи и многие другие.' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },

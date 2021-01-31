@@ -1,6 +1,11 @@
 <template>
   <nuxt-link to="/" class="logo">
-    <img src="@/assets/images/logo.svg" alt="qapsula" />
+    <img
+      src="@/assets/images/logo.svg"
+      alt="qapsula"
+      width="141px"
+      height="42px"
+    />
   </nuxt-link>
 </template>
 
