@@ -8,7 +8,7 @@
   >
     <path
       d="M14 14L8 8M8 8L2 14M8 8L14 2M8 8L2 2"
-      stroke="#2CB2DB"
+      stroke="currentColor"
       stroke-width="3"
       stroke-linecap="round"
       stroke-linejoin="round"

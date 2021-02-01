@@ -20,7 +20,7 @@
       <slot />
 
       <template #popover>
-        <div class="ui-validator__popover-error text-error">
+        <div class="ui-validator__popover-error text-error" :class="errorClass">
           {{ errors[0] }}
         </div>
       </template>

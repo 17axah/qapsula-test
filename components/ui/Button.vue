@@ -37,12 +37,12 @@ export default {
       default: '',
     },
     href: {
-      type: String,
-      default: '',
+      type: [Boolean, String],
+      default: false,
     },
     to: {
-      type: [Object, String],
-      default: '',
+      type: [Boolean, Object, String],
+      default: false,
     },
     type: {
       type: String,
@@ -111,6 +111,7 @@ export default {
         'ui-button--shadowed': this.shadowed,
         'ui-button--static': !!this.static,
         'ui-button--static-md': this.static === 'md',
+        'ui-button--static-sm': this.static === 'sm',
       }
     },
     styles() {
@@ -206,6 +207,10 @@ export default {
     &-md
       width: 46px
       height: 46px
+
+    &-sm
+      width: 36px
+      height: 36px
 
   &__inner
     display: flex

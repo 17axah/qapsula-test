@@ -235,6 +235,11 @@ export default {
   &--filled:not(&--focus)
     background-color: $color-white
 
+  &--textarea
+    #{$parent}__field
+      resize: none
+      height: 95px
+
   &--disabled
     opacity: 0.8
     cursor: not-allowed
