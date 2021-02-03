@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" class="container" :style="styles">
+  <component :is="tag" class="ui-container" :style="styles">
     <slot />
   </component>
 </template>
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.container
+.ui-container
   margin-left: auto
   margin-right: auto
   padding-left: 24px

@@ -90,3 +90,8 @@
 
     .bg-#{'' + $color_name}
       background-color: $color_value
+
+@mixin radiuses()
+  @each $radius_name, $radius_value in $border-radiuses
+    .radius-#{'' + $radius_value}
+      border-radius: #{$radius_value}px

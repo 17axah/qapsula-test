@@ -15,7 +15,9 @@ $columns: 12
 // gutters of grid
 $gutters: 10
 
-$base-border-radius: 10px
+$border-radiuses: (sm: 10, md: 20)
+$base-border-radius: #{map-get($border-radiuses, 'sm')}px
+$border-radius-md: #{map-get($border-radiuses, 'md')}px
 
 $display: flex inline-flex none block
 $text-alignment: left center right

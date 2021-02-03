@@ -7,6 +7,9 @@
   line-height: 24px
   font-weight: 700
 
+.text-bold
+  font-weight: 600
+
 .clear-link,
 .clear-link:hover
   color: currentColor
@@ -45,9 +48,11 @@
         #{$parent}__icon
           color: $color-white
 
+@include colors()
+@include radiuses()
+
 @include display()
 @include alignment()
-@include colors()
 @include spaces()
 @include orders()
 @include font-size()

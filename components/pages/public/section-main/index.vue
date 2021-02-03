@@ -1,22 +1,24 @@
 <template>
   <section class="section-main">
-    <app-container class="section-main__wrapper">
+    <ui-container class="section-main__wrapper">
       <div class="section-main__form">
         <question-form />
       </div>
-      <div class="section-main__swiper">
-        <div>swiper</div>
+      <div class="section-main__slider">
+        <best-doctors />
       </div>
-    </app-container>
+    </ui-container>
   </section>
 </template>
 
 <script>
-import QuestionForm from './question-form'
+import QuestionForm from './QuestionForm'
+import BestDoctors from './BestDoctors'
 
 export default {
   components: {
     QuestionForm,
+    BestDoctors,
   },
 }
 </script>
@@ -42,6 +44,6 @@ export default {
       width: 683px
       margin-bottom: 0
 
-    &__swiper
+    &__slider
       width: 523px
 </style>

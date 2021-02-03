@@ -44,7 +44,7 @@ export default {
   padding: 90px 24px 36px
   position: relative
   box-shadow: 0px 3px 20px rgba(51, 51, 51, 0.15)
-  border-radius: 20px
+  border-radius: $border-radius-md
   text-align: center
 
   &__close

@@ -91,7 +91,7 @@ export default {
       width: 180px
       height: 323px
       box-shadow: 0px 4px 4px rgb(0 0 0 / 25%)
-      border-radius: 20px
+      border-radius: $border-radius-md
       background-color: #52CEF7
       overflow: hidden
 

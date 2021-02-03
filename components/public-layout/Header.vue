@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header__space" />
     <div class="header__panel">
-      <app-container
+      <ui-container
         class="header__inner d-flex items-center content-space-between"
       >
         <div class="d-flex items-center">
@@ -37,7 +37,7 @@
             </ui-button>
           </template>
         </div>
-      </app-container>
+      </ui-container>
     </div>
 
     <mobile-menu

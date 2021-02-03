@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <app-container class="footer__inner">
+    <ui-container class="footer__inner">
       <nav class="footer__nav">
         <div class="d-none d-md-flex content-space-between">
           <div v-for="(item, item_index) in menu_links" :key="item_index">
@@ -98,7 +98,7 @@
           </div>
         </div>
       </div>
-    </app-container>
+    </ui-container>
   </footer>
 </template>
 

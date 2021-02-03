@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import SectionMain from '@/components/pages/public/main/SectionMain'
+import SectionMain from '@/components/pages/public/section-main'
 
 export default {
   components: {
