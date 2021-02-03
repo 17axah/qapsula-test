@@ -1,31 +1,67 @@
 <template>
   <div class="email-form">
-    <!-- eslint-disable -->
     <div class="email-form__close">
       <ui-button static="sm" class="text-primary">
         <ui-icon name="close" />
       </ui-button>
     </div>
-    <div class="email-form__title">
-      <span class="text-primary">Укажите почту,</span> на которую мы сможем отправить <span class="text-primary">ответ специалиста</span>
-    </div>
-    <div class="email-form__description">
-      <span class="text-primary">Никакого спама,</span> только забота о вашем здоровье
-    </div>
+
+    <i18n path="$question_form_email.title" tag="div" class="email-form__title">
+      <template #part0>
+        <span class="text-primary">
+          {{ $t('$question_form_email.title_parts.0') }}
+        </span>
+      </template>
+      <template #part1>
+        <span class="text-primary">
+          {{ $t('$question_form_email.title_parts.1') }}
+        </span>
+      </template>
+    </i18n>
+
+    <i18n
+      path="$question_form_email.description"
+      tag="div"
+      class="email-form__description"
+    >
+      <template #part0>
+        <span class="text-primary">
+          {{ $t('$question_form_email.description_parts.0') }}
+        </span>
+      </template>
+    </i18n>
 
     <div class="email-form__form mb-18">
-      <ui-input v-model="email" class="mb-18" prepend-icon="email" placeholder="Email" />
+      <ui-input
+        v-model="email"
+        class="mb-18"
+        prepend-icon="email"
+        :placeholder="$t('email')"
+      />
       <ui-button color="primary" fluid>
-        Получить ответ
+        {{ $t('get_an_answer') }}
       </ui-button>
     </div>
 
-    <div class="email-form__text">
-      <a href="#">Авторизуйтесь</a>, если у вас уже есть аккаунт
-    </div>
-    <div class="email-form__text">
-      <a href="#">Зарегистрируйтесь</a>, чтобы получить доступ ко всем функциям. Это проще, чем чихнуть
-    </div>
+    <i18n
+      path="$question_form_email.links.0.message"
+      tag="div"
+      class="email-form__text"
+    >
+      <template #link>
+        <a href="#">{{ $t('$question_form_email.links.0.link') }}</a>
+      </template>
+    </i18n>
+
+    <i18n
+      path="$question_form_email.links.1.message"
+      tag="div"
+      class="email-form__text"
+    >
+      <template #link>
+        <a href="#">{{ $t('$question_form_email.links.1.link') }}</a>
+      </template>
+    </i18n>
   </div>
 </template>
 

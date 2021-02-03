@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mb-36 fs-12 text-bold text-center text-primary">
-      Лучшие врачи нашего сервиса
+      {{ $t('$best_doctors_section.title') }}
     </div>
 
     <div class="d-none d-xs-block">

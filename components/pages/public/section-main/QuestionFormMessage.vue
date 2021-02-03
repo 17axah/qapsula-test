@@ -15,15 +15,20 @@
     </div>
 
     <div class="message-form__form">
-      <!-- eslint-disable -->
-      <h1 class="message-form__title text-center text-md-left">
-        Консультация врача
-        онлайн <span class="text-primary">бесплатно</span>
-      </h1>
+      <i18n
+        path="$question_form_message.title"
+        tag="h1"
+        class="message-form__title text-center text-md-left"
+      >
+        <template #mark>
+          <span class="text-primary">
+            {{ $t('free_of_charge') | lower }}
+          </span>
+        </template>
+      </i18n>
 
       <div class="message-form__description text-center text-md-left">
-        Задайте подробный вопрос — получите подробный ответ!
-        Оставайтесь вежливы и помните об орфографии
+        {{ $t('$question_form_message.description') }}
       </div>
 
       <div class="mb-12 d-flex">
@@ -32,7 +37,7 @@
             v-model="message"
             class="message-form__textarea"
             textarea
-            placeholder="Опишите свои симптомы"
+            :placeholder="$t('$question_form_message.message_label')"
           />
         </div>
 
@@ -50,7 +55,9 @@
         <ui-button outlined color="primary" class="mr-12">
           <ui-icon name="clip" />
         </ui-button>
-        <ui-button color="primary" append-icon="send">Отправить</ui-button>
+        <ui-button color="primary" append-icon="send">
+          {{ $t('submit') }}
+        </ui-button>
       </div>
     </div>
   </div>

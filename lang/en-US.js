@@ -20,5 +20,33 @@ export default {
   exit: 'Exit',
   signin_or_signup: 'Signin | Signup',
   menu: 'Menu',
+  submit: 'Submit',
+  get_an_answer: 'Get an answer',
+  free_of_charge: 'Free',
+  email: 'Email',
   $location: 'Moscow, Novy Arbat, 21',
+  $question_form_message: {
+    title: 'Online doctor consultation {mark}',
+    description: `Ask a detailed question - get a detailed answer! Stay polite and remember spelling`,
+    message_label: 'Describe your symptoms',
+  },
+  $question_form_email: {
+    title: '{part0} to which we can send a {part1}',
+    title_parts: ['Specify the mail', 'response from a specialist'],
+    description: '{part0} just taking care of your health',
+    description_parts: ['No spam,'],
+    links: [
+      {
+        message: '{link} if you already have an account',
+        link: 'Log in',
+      },
+      {
+        message: `{link}, to get access to all functions. It's easier than sneezing`,
+        link: 'Register',
+      },
+    ],
+  },
+  $best_doctors_section: {
+    title: 'The best doctors of our service',
+  },
 }

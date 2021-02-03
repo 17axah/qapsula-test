@@ -1,7 +1,9 @@
 <template>
   <div>
-    <question-form-message v-if="false" />
-    <question-form-email v-else />
+    <transition-slide :direction="slide_direction">
+      <question-form-message v-if="state" />
+      <question-form-email v-else />
+    </transition-slide>
   </div>
 </template>
 
@@ -13,6 +15,16 @@ export default {
   components: {
     QuestionFormMessage,
     QuestionFormEmail,
+  },
+  data() {
+    return {
+      state: false,
+    }
+  },
+  computed: {
+    slide_direction() {
+      return this.state ? 'right' : 'left'
+    },
   },
 }
 </script>

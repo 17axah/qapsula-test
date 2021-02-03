@@ -34,6 +34,7 @@ export default {
       src: '@/plugins/drag-scroll',
       mode: 'client',
     },
+    '@/plugins/filters',
     '@/plugins/popover',
     '@/plugins/body-scroll-lock',
     '@/plugins/validation',
