@@ -67,6 +67,7 @@ export default {
   &__text
     height: 24px
     line-height: 26px
+    white-space: nowrap
 
   &__icon
     width: 10px

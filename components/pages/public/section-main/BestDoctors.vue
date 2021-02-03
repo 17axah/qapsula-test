@@ -4,17 +4,31 @@
       Лучшие врачи нашего сервиса
     </div>
 
-    <ui-slider v-bind="settings">
-      <best-doctors-card
-        v-for="(item, index) in items"
-        :key="index"
-        style="width: 200px"
-        :image="require(`@/assets/images/content/${item.image}`)"
-        :name="item.name"
-        :position="item.position"
-        :rate="item.rate"
-      />
-    </ui-slider>
+    <div class="d-none d-xs-block">
+      <ui-slider v-bind="settings">
+        <best-doctors-card
+          v-for="(item, index) in items"
+          :key="index"
+          :image="require(`@/assets/images/content/${item.image}`)"
+          :name="item.name"
+          :position="item.position"
+          :rate="item.rate"
+        />
+      </ui-slider>
+    </div>
+
+    <div class="d-block d-xs-none">
+      <ui-drag-scroll>
+        <best-doctors-card
+          v-for="(item, index) in items"
+          :key="index"
+          :image="require(`@/assets/images/content/${item.image}`)"
+          :name="item.name"
+          :position="item.position"
+          :rate="item.rate"
+        />
+      </ui-drag-scroll>
+    </div>
   </div>
 </template>
 

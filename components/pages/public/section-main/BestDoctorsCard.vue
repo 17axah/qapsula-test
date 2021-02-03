@@ -38,7 +38,11 @@ export default {
 
 <style lang="sass" scoped>
 .doctor-card
-  width: 180px
+  width: 80px
+  margin-right: 20px
+
+  &:last-child
+    margin-right: 0
 
   &__avatar
     width: 80px
@@ -46,6 +50,7 @@ export default {
     margin-bottom: 12px
 
   &__name
+    height: 50px
     font-size: 12px
     line-height: 16px
     margin-bottom: 9px
@@ -57,19 +62,22 @@ export default {
     margin-bottom: 16px
 
 @media (min-width: map-get($breakpoints, 'md'))
-.doctor-card
-  &__avatar
-    width: 100px
-    height: 100px
-    margin-bottom: 18px
+  .doctor-card
+    width: 120px
 
-  &__name
-    font-size: 14px
-    line-height: 20px
-    margin-bottom: 14px
+    &__avatar
+      width: 100px
+      height: 100px
+      margin-bottom: 18px
 
-  &__position
-    font-size: 12px
-    line-height: 16px
-    margin-bottom: 15px
+    &__name
+      height: auto
+      font-size: 14px
+      line-height: 20px
+      margin-bottom: 14px
+
+    &__position
+      font-size: 12px
+      line-height: 16px
+      margin-bottom: 15px
 </style>

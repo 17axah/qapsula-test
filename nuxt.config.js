@@ -30,6 +30,10 @@ export default {
       src: '@/plugins/ripple',
       mode: 'client',
     },
+    {
+      src: '@/plugins/drag-scroll',
+      mode: 'client',
+    },
     '@/plugins/popover',
     '@/plugins/body-scroll-lock',
     '@/plugins/validation',
@@ -67,11 +71,13 @@ export default {
     '@nuxtjs/style-resources',
     'nuxt-mq',
     'nuxt-i18n',
+    'vue-scrollto/nuxt',
   ],
 
   mq: {
     defaultBreakpoint: 'sm',
     breakpoints: {
+      xs: 576,
       sm: 768,
       md: 1024,
       lg: 1200,
@@ -101,6 +107,6 @@ export default {
   axios: {},
 
   build: {
-    transpile: ['vee-validate/dist/rules'],
+    transpile: ['vee-validate/dist/rules', 'vue-scrollto'],
   },
 }

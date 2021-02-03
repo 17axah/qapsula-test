@@ -56,6 +56,9 @@ export default {
     border-radius: 100%
     background-color: $color-primary
 
+  ::v-deep img
+    pointer-events: none
+
   ::v-deep [tabindex]
     outline: none
 

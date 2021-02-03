@@ -23,7 +23,9 @@
     "v-scroll-lock": "^1.3.1",
     "v-tooltip": "^2.1.2",
     "vee-validate": "^3.4.5",
+    "vue-dragscroll": "^2.1.3",
     "vue-material-design-ripple": "^1.0.0",
+    "vue-scrollto": "^2.20.0",
     "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
