@@ -59,12 +59,6 @@ export default {
     mask: VueMaskDirective,
   },
   inheritAttrs: false,
-  inject: {
-    $_hasErrors: {
-      type: Function,
-      default: () => () => false,
-    },
-  },
   props: {
     value: {
       type: [String, Number],
@@ -161,7 +155,7 @@ export default {
         'ui-input--focus': this.focusable,
         'ui-input--textarea': this.textarea,
         'ui-input--disabled': this.disabled,
-        'ui-input--error': this.$_hasErrors() || this.error,
+        'ui-input--error': this.error,
       }
     },
     field_tag() {

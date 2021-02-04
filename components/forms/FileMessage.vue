@@ -1,14 +1,17 @@
 <template>
   <ui-form class="form-file-message" @submit="submit">
     <div class="mb-12 d-flex">
-      <ui-validator class="col-auto" absolute rules="required">
-        <ui-input
-          v-model="fields.message"
-          class="form-file-message__textarea"
-          textarea
-          :placeholder="placeholder"
-        />
-      </ui-validator>
+      <div class="col-auto">
+        <ui-validator v-slot="{ error }" absolute rules="required">
+          <ui-input
+            v-model="fields.message"
+            class="form-file-message__textarea"
+            textarea
+            :error="error"
+            :placeholder="placeholder"
+          />
+        </ui-validator>
+      </div>
 
       <div class="ml-12 d-md-none">
         <ui-input-hidden-file

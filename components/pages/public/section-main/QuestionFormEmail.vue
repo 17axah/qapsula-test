@@ -32,13 +32,16 @@
     </i18n>
 
     <ui-form class="email-form__form mb-18" @submit="submit">
-      <ui-validator rules="required|email" popover class="mb-18">
-        <ui-input
-          v-model="email"
-          prepend-icon="email"
-          :placeholder="$t('email')"
-        />
-      </ui-validator>
+      <div class="mb-18">
+        <ui-validator v-slot="{ error }" rules="required|email" popover>
+          <ui-input
+            v-model="email"
+            prepend-icon="email"
+            :error="error"
+            :placeholder="$t('email')"
+          />
+        </ui-validator>
+      </div>
 
       <ui-button color="primary" type="submit" fluid>
         {{ $t('get_an_answer') }}

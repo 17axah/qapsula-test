@@ -17,7 +17,7 @@
       offset="10"
       trigger=""
     >
-      <slot />
+      <slot v-bind="{ error: !!errors.length }" />
 
       <template #popover>
         <div class="ui-validator__popover-error text-error" :class="errorClass">
@@ -27,7 +27,7 @@
     </v-popover>
 
     <template v-else>
-      <slot />
+      <slot v-bind="{ error: !!errors.length }" />
       <transition-collapse>
         <div
           v-if="errors.length"
@@ -48,13 +48,7 @@ export default {
   components: {
     ValidationProvider,
   },
-  provide() {
-    return {
-      $_hasErrors: () => {
-        return this.$refs.validator?.errors.length
-      },
-    }
-  },
+  inheritAttrs: false,
   props: {
     errorClass: {
       type: [String, Array, Object],
