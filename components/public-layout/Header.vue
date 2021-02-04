@@ -71,7 +71,7 @@ export default {
       menu: [
         {
           locale: 'knowledge_base',
-          icon: 'list',
+          icon: 'list-outlined',
           path: '#',
           highlight: true,
         },
@@ -104,7 +104,7 @@ export default {
         },
         {
           path: '#',
-          icon: 'message',
+          icon: 'message-circle',
           locale: 'consulting',
         },
         {

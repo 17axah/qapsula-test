@@ -25,6 +25,7 @@ export default {
   free_of_charge: 'Free',
   email: 'Email',
   go_to_knowledge: 'Go to the Knowledge',
+  $capabilities: 'Qapsula capabilities',
   $location: 'Moscow, Novy Arbat, 21',
   $question_form_message: {
     title: 'Online doctor consultation {mark}',

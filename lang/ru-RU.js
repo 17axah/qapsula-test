@@ -25,6 +25,7 @@ export default {
   free_of_charge: 'Бесплатно',
   email: 'Email',
   go_to_knowledge: 'Перейти в Базу знаний',
+  $capabilities: 'Возможности Qapsula',
   $location: 'Москва, Новый Арбат, 21',
   $question_form_message: {
     title: 'Консультация врача онлайн {mark}',
