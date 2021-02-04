@@ -1,6 +1,6 @@
 <template>
   <div class="message-form">
-    <div class="message-form__logo d-none d-md-block">
+    <div class="message-form__logo d-none d-lg-block">
       <video
         width="430px"
         height="323px"

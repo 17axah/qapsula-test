@@ -32,12 +32,11 @@ export default {
 
 @media (min-width: map-get($breakpoints, 'md'))
   .section-main
-    padding: 48px 0 50px
+    padding: 80px 0
 
     &__wrapper
-      height: 385px
       display: flex
-      align-items: center
+      align-items: flex-start
       justify-content: space-between
 
     &__form
