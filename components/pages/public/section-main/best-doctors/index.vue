@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import BestDoctorsCard from './BestDoctorsCard'
+import BestDoctorsCard from './Card'
 
 export default {
   components: {

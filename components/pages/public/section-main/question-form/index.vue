@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import QuestionFormMessage from './QuestionFormMessage'
-import QuestionFormEmail from './QuestionFormEmail'
+import QuestionFormMessage from './Message'
+import QuestionFormEmail from './Email'
 
 export default {
   components: {

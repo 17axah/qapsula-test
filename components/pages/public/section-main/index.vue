@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import QuestionForm from './QuestionForm'
-import BestDoctors from './BestDoctors'
+import QuestionForm from './question-form'
+import BestDoctors from './best-doctors'
 
 export default {
   components: {
