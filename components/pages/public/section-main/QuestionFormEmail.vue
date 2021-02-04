@@ -115,6 +115,9 @@ export default {
     font-weight: 600
 
   &__form
+    max-width: 294px
+    margin-left: auto
+    margin-right: auto
     margin-bottom: 75px
 
   &__text
@@ -148,8 +151,7 @@ export default {
       margin-bottom: 26px
 
     &__form
-      margin: 0 auto 18px
-      max-width: 294px
+      margin-bottom: 18px
 
     &__text
       margin: 0 auto 9px
