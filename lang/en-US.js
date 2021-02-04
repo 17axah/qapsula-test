@@ -49,4 +49,8 @@ export default {
   $best_doctors_section: {
     title: 'The best doctors of our service',
   },
+  validation: {
+    required: 'Required field',
+    email: 'Enter a valid email',
+  },
 }

@@ -1,8 +1,8 @@
 <template>
   <div>
     <transition-slide :direction="slide_direction">
-      <question-form-message v-if="state" />
-      <question-form-email v-else />
+      <question-form-message v-if="initial_state" @submit="messageSubmit" />
+      <question-form-email v-else @cancel="reset" @submit="emailSubmit" />
     </transition-slide>
   </div>
 </template>
@@ -18,13 +18,28 @@ export default {
   },
   data() {
     return {
-      state: false,
+      initial_state: true,
+      fields: {
+        message: '',
+        email: '',
+      },
     }
   },
   computed: {
     slide_direction() {
-      return this.state ? 'right' : 'left'
+      return this.initial_state ? 'right' : 'left'
     },
+  },
+  methods: {
+    reset() {
+      this.initial_state = true
+    },
+    messageSubmit(message) {
+      this.message = message
+
+      this.initial_state = false
+    },
+    emailSubmit() {},
   },
 }
 </script>

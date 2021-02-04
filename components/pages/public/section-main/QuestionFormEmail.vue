@@ -1,7 +1,7 @@
 <template>
   <div class="email-form">
     <div class="email-form__close">
-      <ui-button static="sm" class="text-primary">
+      <ui-button static="sm" class="text-primary" @click="$emit('cancel')">
         <ui-icon name="close" />
       </ui-button>
     </div>
@@ -31,17 +31,19 @@
       </template>
     </i18n>
 
-    <div class="email-form__form mb-18">
-      <ui-input
-        v-model="email"
-        class="mb-18"
-        prepend-icon="email"
-        :placeholder="$t('email')"
-      />
-      <ui-button color="primary" fluid>
+    <ui-form class="email-form__form mb-18" @submit="submit">
+      <ui-validator rules="required|email" popover class="mb-18">
+        <ui-input
+          v-model="email"
+          prepend-icon="email"
+          :placeholder="$t('email')"
+        />
+      </ui-validator>
+
+      <ui-button color="primary" type="submit" fluid>
         {{ $t('get_an_answer') }}
       </ui-button>
-    </div>
+    </ui-form>
 
     <i18n
       path="$question_form_email.links.0.message"
@@ -71,6 +73,11 @@ export default {
     return {
       email: '',
     }
+  },
+  methods: {
+    submit() {
+      this.$emit('submit', this.email)
+    },
   },
 }
 </script>

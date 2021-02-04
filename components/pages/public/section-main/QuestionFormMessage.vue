@@ -14,7 +14,7 @@
       </video>
     </div>
 
-    <div class="message-form__form">
+    <ui-form class="message-form__form" @submit="submit">
       <i18n
         path="$question_form_message.title"
         tag="h1"
@@ -32,20 +32,20 @@
       </div>
 
       <div class="mb-12 d-flex">
-        <div class="col-auto">
+        <ui-validator class="col-auto" absolute rules="required">
           <ui-input
             v-model="message"
             class="message-form__textarea"
             textarea
             :placeholder="$t('$question_form_message.message_label')"
           />
-        </div>
+        </ui-validator>
 
         <div class="ml-12 d-md-none">
           <ui-button outlined fluid color="primary" class="mb-12">
             <ui-icon name="clip" />
           </ui-button>
-          <ui-button color="primary" fluid>
+          <ui-button color="primary" type="submit" fluid>
             <ui-icon name="send" />
           </ui-button>
         </div>
@@ -55,11 +55,11 @@
         <ui-button outlined color="primary" class="mr-12">
           <ui-icon name="clip" />
         </ui-button>
-        <ui-button color="primary" append-icon="send">
+        <ui-button color="primary" type="submit" append-icon="send">
           {{ $t('submit') }}
         </ui-button>
       </div>
-    </div>
+    </ui-form>
   </div>
 </template>
 
@@ -69,6 +69,11 @@ export default {
     return {
       message: '',
     }
+  },
+  methods: {
+    submit() {
+      this.$emit('submit', this.message)
+    },
   },
 }
 </script>

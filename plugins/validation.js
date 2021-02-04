@@ -1,8 +1,8 @@
 import { extend, configure } from 'vee-validate'
-import { required, min } from 'vee-validate/dist/rules'
+import { required, email } from 'vee-validate/dist/rules'
 
 extend('required', required)
-extend('min', min)
+extend('email', email)
 
 export default function ({ app }) {
   configure({

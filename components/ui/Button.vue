@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="tag"
+    :is="button_tag"
     v-ripple="ripple"
     v-bind="$attrs"
     class="ui-button"
@@ -43,6 +43,10 @@ export default {
     to: {
       type: [Boolean, Object, String],
       default: false,
+    },
+    tag: {
+      type: String,
+      default: 'button',
     },
     type: {
       type: String,
@@ -133,13 +137,13 @@ export default {
     button_disabled() {
       return this.disabled || this.loading
     },
-    tag() {
+    button_tag() {
       if (this.href) {
         return 'a'
       } else if (this.to) {
         return 'nuxt-link'
       } else {
-        return 'button'
+        return this.tag
       }
     },
   },
