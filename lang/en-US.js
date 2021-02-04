@@ -24,6 +24,7 @@ export default {
   get_an_answer: 'Get an answer',
   free_of_charge: 'Free',
   email: 'Email',
+  go_to_knowledge: 'Go to the Knowledge',
   $location: 'Moscow, Novy Arbat, 21',
   $question_form_message: {
     title: 'Online doctor consultation {mark}',
@@ -46,8 +47,12 @@ export default {
       },
     ],
   },
-  $best_doctors_section: {
+  $best_doctors: {
     title: 'The best doctors of our service',
+  },
+  $preview_knowledge: {
+    title: `The knowledge base is more than {count} ready-made answers to health questions!`,
+    description: `Articles by doctors, reviews of methods and drugs, anonymized consultations of our doctors with real patients`,
   },
   validation: {
     required: 'Required field',

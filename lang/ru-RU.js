@@ -24,6 +24,7 @@ export default {
   get_an_answer: 'Получить ответ',
   free_of_charge: 'Бесплатно',
   email: 'Email',
+  go_to_knowledge: 'Перейти в Базу знаний',
   $location: 'Москва, Новый Арбат, 21',
   $question_form_message: {
     title: 'Консультация врача онлайн {mark}',
@@ -46,8 +47,12 @@ export default {
       },
     ],
   },
-  $best_doctors_section: {
+  $best_doctors: {
     title: 'Лучшие врачи нашего сервиса',
+  },
+  $preview_knowledge: {
+    title: `База знаний — это более {count} готовых ответов на вопросы о здоровье!`,
+    description: `Статьи докторов, обзоры методик и препаратов, анонимизированные консультации наших врачей с настоящими пациентами`,
   },
   validation: {
     required: 'Поле обязательно для заполнения',
