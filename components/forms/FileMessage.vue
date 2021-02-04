@@ -19,12 +19,12 @@
           :accept="accept"
           class="mb-12"
         >
-          <ui-button outlined fluid color="primary" tag="div">
+          <ui-button outlined color="primary" static="md" tag="div">
             <ui-icon name="clip" />
           </ui-button>
         </ui-input-hidden-file>
 
-        <ui-button color="primary" type="submit" fluid>
+        <ui-button color="primary" type="submit" static="md">
           <ui-icon name="send" />
         </ui-button>
       </div>
