@@ -56,6 +56,10 @@ export default {
         global: true,
       },
       {
+        path: '@/components/forms/',
+        prefix: 'form',
+      },
+      {
         path: '@/components/app/',
         prefix: 'app',
       },

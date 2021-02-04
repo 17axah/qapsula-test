@@ -22,6 +22,7 @@ export default {
       fields: {
         message: '',
         email: '',
+        files: [],
       },
     }
   },
@@ -34,8 +35,9 @@ export default {
     reset() {
       this.initial_state = true
     },
-    messageSubmit(message) {
+    messageSubmit({ message, files }) {
       this.message = message
+      this.files = files
 
       this.initial_state = false
     },

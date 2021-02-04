@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="user-icon"
+    class="icon-user"
     :class="classes"
     width="24"
     height="28"
@@ -24,14 +24,13 @@ export default {
   props: {
     size: {
       type: String,
-      default: 'md',
+      default: '',
     },
   },
   computed: {
     classes() {
       return {
-        'user-icon--md': this.size === 'md',
-        'user-icon--sm': this.size === 'sm',
+        'icon-user--sm': this.size === 'sm',
       }
     },
   },
@@ -39,11 +38,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.user-icon
-  &--md
-    width: 24px
-    height: 28px
-
+.icon-user
   &--sm
     width: 18px
     height: 21px

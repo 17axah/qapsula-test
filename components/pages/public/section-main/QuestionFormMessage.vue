@@ -14,7 +14,7 @@
       </video>
     </div>
 
-    <ui-form class="message-form__form" @submit="submit">
+    <div class="message-form__form">
       <i18n
         path="$question_form_message.title"
         tag="h1"
@@ -31,48 +31,19 @@
         {{ $t('$question_form_message.description') }}
       </div>
 
-      <div class="mb-12 d-flex">
-        <ui-validator class="col-auto" absolute rules="required">
-          <ui-input
-            v-model="message"
-            class="message-form__textarea"
-            textarea
-            :placeholder="$t('$question_form_message.message_label')"
-          />
-        </ui-validator>
-
-        <div class="ml-12 d-md-none">
-          <ui-button outlined fluid color="primary" class="mb-12">
-            <ui-icon name="clip" />
-          </ui-button>
-          <ui-button color="primary" type="submit" fluid>
-            <ui-icon name="send" />
-          </ui-button>
-        </div>
-      </div>
-
-      <div class="d-none d-md-flex content-flex-end">
-        <ui-button outlined color="primary" class="mr-12">
-          <ui-icon name="clip" />
-        </ui-button>
-        <ui-button color="primary" type="submit" append-icon="send">
-          {{ $t('submit') }}
-        </ui-button>
-      </div>
-    </ui-form>
+      <form-file-message
+        :placeholder="$t('$question_form_message.message_label')"
+        @submit="submit"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      message: '',
-    }
-  },
   methods: {
-    submit() {
-      this.$emit('submit', this.message)
+    submit(fields) {
+      this.$emit('submit', fields)
     },
   },
 }
@@ -87,11 +58,6 @@ export default {
     font-size: 12px
     line-height: 22px
     margin-bottom: 21px
-
-  &__textarea
-    & ::v-deep
-      .ui-input__field
-        height: 104px !important
 
 @media (min-width: map-get($breakpoints, 'md'))
   .message-form
@@ -119,9 +85,4 @@ export default {
     &__form
       width: 431px
       min-width: 431px
-
-    &__textarea
-      & ::v-deep
-        .ui-input__field
-          height: 95px !important
 </style>

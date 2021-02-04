@@ -1,5 +1,7 @@
 <template>
   <svg
+    class="icon-close"
+    :class="classes"
     width="16"
     height="16"
     viewBox="0 0 16 16"
@@ -15,3 +17,33 @@
     />
   </svg>
 </template>
+
+<script>
+export default {
+  props: {
+    size: {
+      type: String,
+      default: '',
+    },
+  },
+  computed: {
+    classes() {
+      return {
+        'icon-close--sm': this.size === 'sm',
+        'icon-close--xs': this.size === 'xs',
+      }
+    },
+  },
+}
+</script>
+
+<style lang="sass" scoped>
+.icon-close
+  &--sm
+    width: 12px
+    height: 12px
+
+  &--xs
+    width: 10px
+    height: 10px
+</style>

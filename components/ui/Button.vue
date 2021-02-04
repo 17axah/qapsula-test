@@ -114,6 +114,7 @@ export default {
       return {
         'ui-button--colored': !!this.color,
         'ui-button--primary': this.color === 'primary',
+        'ui-button--error': this.color === 'error',
         'ui-button--outlined': this.outlined,
         'ui-button--disabled': this.disabled,
         'ui-button--loading': this.loading,
@@ -126,6 +127,7 @@ export default {
         'ui-button--static': !!this.static,
         'ui-button--static-md': this.static === 'md',
         'ui-button--static-sm': this.static === 'sm',
+        'ui-button--static-xs': this.static === 'xs',
       }
     },
     styles() {
@@ -180,6 +182,14 @@ export default {
     &#{$parent}--outlined
       color: $color-primary
 
+  &--error
+    &:not(#{$parent}--outlined)
+      background-color: $color-error
+      color: $color-white
+
+    &#{$parent}--outlined
+      color: $color-error
+
   &--outlined
     border: 2px solid
 
@@ -222,6 +232,9 @@ export default {
     box-shadow: 0px 2px 20px rgba(51, 51, 51, 0.1)
 
   &--static
+    #{$parent}__label
+      margin-bottom: 0
+
     &-md
       width: 46px
       height: 46px
@@ -229,6 +242,10 @@ export default {
     &-sm
       width: 36px
       height: 36px
+
+    &-xs
+      width: 24px
+      height: 24px
 
   &__inner
     display: flex
