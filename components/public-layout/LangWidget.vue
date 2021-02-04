@@ -96,6 +96,8 @@ export default {
     border: 2px solid transparent
     text-decoration: none
     color: currentColor
+    font-size: 16px
+    line-height: 22px
     font-weight: 600
 
     &:not(.active):hover

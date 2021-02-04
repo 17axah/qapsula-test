@@ -231,6 +231,8 @@ export default {
 
 .footer-menu-list
   &__item
+    font-size: 16px
+    line-height: 30px
     margin-bottom: 10px
 
     &:last-child

@@ -168,9 +168,6 @@ export default {
   cursor: pointer
   border-radius: $base-border-radius
   font-weight: 500
-  font-family: $base-font-family
-  font-size: $base-font-size
-  line-height: $base-line-height
   text-decoration: none
   transition: all 0.2s
 
