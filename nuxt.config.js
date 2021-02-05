@@ -123,11 +123,13 @@ export default {
       'vee-validate',
       'v-tooltip',
       'vue-material-design-ripple',
+      'debounce',
       'v-mask',
       'vue-i18n',
       'vue-scrollto',
       'vue-dragscroll',
       'v-scroll-lock',
+      'vue-slick-carousel',
     ],
   },
 }
