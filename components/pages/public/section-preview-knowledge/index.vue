@@ -2,13 +2,17 @@
   <section class="section-knowledge">
     <ui-container class="section-knowledge__wrapper">
       <div class="section-knowledge__inner">
-        <i18n path="$preview_knowledge.title" tag="h3" class="mb-24 mb-md-40">
+        <i18n
+          path="$section_preview_knowledge.title"
+          tag="h3"
+          class="mb-24 mb-md-40"
+        >
           <template #count>
             <span class="text-primary">100 000</span>
           </template>
         </i18n>
         <div class="section-knowledge__description">
-          {{ $t('$preview_knowledge.description') }}
+          {{ $t('$section_preview_knowledge.description') }}
         </div>
         <ui-button color="primary">
           {{ $t('go_to_knowledge') }}

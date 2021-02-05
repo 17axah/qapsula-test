@@ -1,5 +1,4 @@
 export default {
-  copyright: '© 2020 LLC «Qapsula»',
   rights_reserved: 'Rights reserved',
   about: 'About',
   company: 'Company',
@@ -14,6 +13,9 @@ export default {
   feedback: 'Feedback',
   become_a_consultant: 'Become a consultant',
   knowledge_base: 'Knowledge',
+  free_questions: 'Free questions',
+  medical_card: 'Medical card',
+  audio_and_video: 'Audio and video',
   profile: 'Profile',
   consulting: 'Consulting',
   settings: 'Settings',
@@ -25,8 +27,12 @@ export default {
   free_of_charge: 'Free',
   email: 'Email',
   go_to_knowledge: 'Go to the Knowledge',
-  $capabilities: 'Qapsula capabilities',
-  $location: 'Moscow, Novy Arbat, 21',
+  sign_in_to_account: 'Sign in to your account',
+  _copyright: '© 2020 LLC «Qapsula»',
+  _cashback: 'Qapsula cashback',
+  _capabilities: 'Qapsula capabilities',
+  _bot: 'Qapsula bot',
+  _location: 'Moscow, Novy Arbat, 21',
   $question_form_message: {
     title: 'Online doctor consultation {mark}',
     description: `Ask a detailed question - get a detailed answer! Stay polite and remember spelling`,
@@ -51,9 +57,20 @@ export default {
   $best_doctors: {
     title: 'The best doctors of our service',
   },
-  $preview_knowledge: {
+  $section_preview_knowledge: {
     title: `The knowledge base is more than {count} ready-made answers to health questions!`,
     description: `Articles by doctors, reviews of methods and drugs, anonymized consultations of our doctors with real patients`,
+  },
+  $section_capabilities: {
+    sign_in_label: 'And get access to all functions',
+    items: [
+      `Ask your doctor online for free! Reply within 24 hours`,
+      `Answers and articles of specialists on questions of interest to you`,
+      `Scan receipts from pharmacies, clinics, laboratories and get real cashback`,
+      `Safe storage of medical data. Ability to upload ECG, MRI, CT`,
+      `Medication reminders. Appointment to a doctor`,
+      `The ability to communicate with a doctor from any device and from anywhere in the world`,
+    ],
   },
   validation: {
     required: 'Required field',

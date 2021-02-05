@@ -92,7 +92,7 @@
               <ui-icon name="qapsula" />
             </nuxt-link>
             <div class="text-body-1 text-grey">
-              {{ $t('copyright') }}. <br />
+              {{ $t('_copyright') }}. <br />
               {{ $t('rights_reserved') }}.
             </div>
           </div>
@@ -198,7 +198,7 @@ export default {
         {
           path: 'https://goo.gl/maps/DTFUBoubwjZbtjjh8',
           icon: 'location',
-          locale: '$location',
+          locale: '_location',
           target: '_blank',
         },
         {
