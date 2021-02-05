@@ -2,7 +2,7 @@
   <div class="doctor-card text-center">
     <div class="d-flex content-center">
       <ui-avatar class="doctor-card__avatar">
-        <img :src="image" :alt="name" />
+        <img :src="image" :alt="name" width="100px" height="100px" />
       </ui-avatar>
     </div>
     <div class="doctor-card__name">{{ name }}</div>

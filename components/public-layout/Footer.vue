@@ -88,7 +88,11 @@
       <div class="footer__logo">
         <div class="d-flex d-md-block content-center">
           <div class="text-center text-md-left">
-            <nuxt-link to="/" class="clear-link d-inline-flex d-md-block mb-14">
+            <nuxt-link
+              to="/"
+              aria-label="qapsula"
+              class="clear-link d-inline-flex d-md-block mb-14"
+            >
               <ui-icon name="qapsula" />
             </nuxt-link>
             <div class="text-body-1 text-grey">

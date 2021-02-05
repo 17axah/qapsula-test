@@ -6,6 +6,7 @@
           <ui-input
             v-model="fields.message"
             class="form-file-message__textarea"
+            aria-label="message"
             textarea
             :error="error"
             :placeholder="placeholder"
@@ -19,12 +20,18 @@
           :accept="accept"
           class="mb-12"
         >
-          <ui-button outlined color="primary" static="md" tag="div">
+          <ui-button
+            outlined
+            color="primary"
+            static="md"
+            aria-label="file"
+            tag="div"
+          >
             <ui-icon name="clip" />
           </ui-button>
         </ui-input-hidden-file>
 
-        <ui-button color="primary" type="submit" static="md">
+        <ui-button color="primary" aria-label="submit" type="submit" static="md">
           <ui-icon name="send" />
         </ui-button>
       </div>
@@ -36,7 +43,7 @@
         :accept="accept"
         class="mr-12"
       >
-        <ui-button outlined color="primary" tag="div">
+        <ui-button outlined color="primary" aria-label="file" tag="div">
           <ui-icon name="clip" />
         </ui-button>
       </ui-input-hidden-file>

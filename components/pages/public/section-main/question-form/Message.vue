@@ -10,7 +10,12 @@
         playsinline
       >
         <source src="@/assets/video/qapsula.mp4" type="video/mp4" />
-        <img src="@/assets/images/qapsula-poster.png" alt="qapsula-poster" />
+        <img
+          src="@/assets/images/qapsula-poster.png"
+          width="430px"
+          height="323px"
+          alt="qapsula-poster"
+        />
       </video>
     </div>
 

@@ -1,9 +1,9 @@
 <template>
   <section class="section-capabilities">
     <ui-container>
-      <h3 class="section-capabilities__title">
+      <h2 class="text-h3 section-capabilities__title">
         {{ $t('_capabilities') }}
-      </h3>
+      </h2>
 
       <ul class="row gutter-24">
         <li

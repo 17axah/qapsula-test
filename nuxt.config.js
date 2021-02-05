@@ -71,10 +71,8 @@ export default {
   ],
 
   modules: [
-    '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
-    'nuxt-mq',
     'nuxt-i18n',
     'vue-scrollto/nuxt',
   ],
@@ -110,6 +108,13 @@ export default {
   },
 
   axios: {},
+
+  pwa: {
+    manifest: {
+      name: 'Qapsula',
+      theme_color: '#2CB2DB',
+    },
+  },
 
   build: {
     transpile: ['vee-validate/dist/rules', 'vue-scrollto'],

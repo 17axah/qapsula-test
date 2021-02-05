@@ -15,6 +15,18 @@
   overflow: hidden
   text-overflow: ellipsis
 
+.text-h2
+  font-size: 26px
+  line-height: 30px
+
+.text-h3
+  font-size: 20px
+  line-height: 27px
+
+.text-h4
+  font-size: 18px
+  line-height: 27px
+
 .clear-link,
 .clear-link:hover
   color: currentColor
@@ -69,3 +81,16 @@
     @include spaces($bp)
     @include orders($bp)
     @include font-size($bp)
+
+@media (min-width: map-get($breakpoints, 'md'))
+  .text-h2
+    font-size: 39px
+    line-height: 46px
+
+  .text-h3
+    font-size: 30px
+    line-height: 32px
+
+  .text-h4
+    font-size: 26px
+    line-height: 28px

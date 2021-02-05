@@ -4,8 +4,8 @@
       <div class="section-knowledge__inner">
         <i18n
           path="$section_preview_knowledge.title"
-          tag="h3"
-          class="mb-24 mb-md-40"
+          tag="h2"
+          class="text-h3 mb-24 mb-md-40"
         >
           <template #count>
             <span class="text-primary">100 000</span>

@@ -1,11 +1,11 @@
 <template>
   <div class="card" :class="classes">
-    <nuxt-link :to="path" class="card__link" />
+    <nuxt-link :to="path" :aria-label="title" class="card__link" />
 
     <div class="card__icon text-primary">
       <ui-icon :name="icon" />
     </div>
-    <h4 class="card__title">{{ title }}</h4>
+    <h3 class="text-h4 card__title">{{ title }}</h3>
     <div class="card__description">
       {{ description }}
     </div>
