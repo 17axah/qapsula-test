@@ -116,7 +116,16 @@ export default {
     },
   },
 
+  polyfill: false,
+
   build: {
-    transpile: ['vee-validate/dist/rules', 'vue-scrollto'],
+    transpile: [
+      'vee-validate',
+      'v-tooltip',
+      'vue-material-design-ripple',
+      'v-mask',
+      'vue-i18n',
+      'vue-scrollto',
+    ],
   },
 }
