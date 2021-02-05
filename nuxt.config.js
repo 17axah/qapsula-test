@@ -126,6 +126,9 @@ export default {
       'v-mask',
       'vue-i18n',
       'vue-scrollto',
+      'vue-dragscroll',
+      'v-scroll-lock',
+      'v-mask',
     ],
   },
 }
