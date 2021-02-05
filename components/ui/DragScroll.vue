@@ -3,7 +3,7 @@
     <div class="ui-dragscroll__inner">
       <div
         ref="dragscroll"
-        v-dragscroll
+        v-dragscroll.pass
         class="ui-dragscroll__track"
         @dragscrollmove="dragscrollmove"
       >
