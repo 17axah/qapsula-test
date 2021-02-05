@@ -128,7 +128,6 @@ export default {
       'vue-scrollto',
       'vue-dragscroll',
       'v-scroll-lock',
-      'v-mask',
     ],
   },
 }
