@@ -31,7 +31,12 @@
           </ui-button>
         </ui-input-hidden-file>
 
-        <ui-button color="primary" aria-label="submit" type="submit" static="md">
+        <ui-button
+          color="primary"
+          aria-label="submit"
+          type="submit"
+          static="md"
+        >
           <ui-icon name="send" />
         </ui-button>
       </div>
