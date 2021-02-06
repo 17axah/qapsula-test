@@ -75,6 +75,7 @@ export default {
     '@nuxtjs/style-resources',
     'nuxt-i18n',
     'vue-scrollto/nuxt',
+    'nuxt-lazy-load',
   ],
 
   mq: {
@@ -122,14 +123,7 @@ export default {
     transpile: [
       'vee-validate',
       'v-tooltip',
-      'vue-material-design-ripple',
-      'debounce',
-      'v-mask',
-      'vue-i18n',
       'vue-scrollto',
-      'vue-dragscroll',
-      'v-scroll-lock',
-      'vue-slick-carousel',
     ],
   },
 }
