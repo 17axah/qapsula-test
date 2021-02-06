@@ -68,9 +68,6 @@ export default {
 
   buildModules: [
     '@nuxtjs/eslint-module',
-  ],
-
-  modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     'nuxt-i18n',
