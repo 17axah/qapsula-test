@@ -75,7 +75,6 @@ export default {
     '@nuxtjs/style-resources',
     'nuxt-i18n',
     'vue-scrollto/nuxt',
-    'nuxt-lazy-load',
   ],
 
   mq: {
