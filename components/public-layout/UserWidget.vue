@@ -17,7 +17,7 @@
     </div>
 
     <template #popover>
-      <ul class="menu-list menu-list--hovered pv-14">
+      <ul class="d-none d-md-block menu-list menu-list--hovered pv-14">
         <li v-for="(link, index) in menu" :key="index" class="mb-5">
           <a :href="link.path" class="menu-list__link pv-13 ph-36">
             <ui-icon :name="link.icon" class="menu-list__icon" />

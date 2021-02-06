@@ -75,17 +75,14 @@ export default {
     '@nuxtjs/style-resources',
     'nuxt-i18n',
     'vue-scrollto/nuxt',
+    [
+      'nuxt-lazy-load',
+      {
+        polyfill: false,
+        directiveOnly: true,
+      },
+    ],
   ],
-
-  mq: {
-    defaultBreakpoint: 'sm',
-    breakpoints: {
-      xs: 576,
-      sm: 768,
-      md: 1024,
-      lg: 1200,
-    },
-  },
 
   i18n: {
     lazy: true,
@@ -107,8 +104,6 @@ export default {
     ],
   },
 
-  axios: {},
-
   pwa: {
     manifest: {
       name: 'Qapsula',
@@ -120,9 +115,7 @@ export default {
 
   build: {
     transpile: [
-      'vee-validate',
-      'v-tooltip',
-      'vue-scrollto',
+      'vee-validate/dist/rules',
     ],
   },
 }

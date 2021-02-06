@@ -2,6 +2,7 @@
   <div class="message-form">
     <div class="message-form__logo d-none d-lg-block">
       <video
+        v-lazy-load
         width="430px"
         height="323px"
         autoplay="autoplay"
@@ -9,9 +10,10 @@
         loop="loop"
         playsinline
       >
-        <source src="@/assets/video/qapsula.mp4" type="video/mp4" />
+        <source data-src="@/assets/video/qapsula.mp4" type="video/mp4" />
         <img
-          src="@/assets/images/qapsula-poster.png"
+          v-lazy-load
+          data-src="@/assets/images/qapsula-poster.png"
           width="430px"
           height="323px"
           alt="qapsula-poster"
